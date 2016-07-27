@@ -1,0 +1,74 @@
+body {
+	background-color: white;
+	max-width: 400px;
+}
+div.row:first-child {
+	background-color: #013781;
+}
+div.row:first-child>div.col-xs-4 {
+	padding-top: 21px;
+    height: 20px;
+}
+div.row:first-child>div.col-xs-4>img.img-responsive {
+	margin-bottom: 10px;
+    padding-bottom: 17.5px;
+}
+div.row:first-child>div.col-xs-8 {
+	color: white;
+} 
+div.row:nth-child(2) {
+	margin-top: 2em;
+	background-color: #f1f1f1;
+} 
+a {
+	color: black;
+}
+.nav {
+	background-color: white;
+	margin-left: -15px;
+	margin-right: -15px;
+	padding-left: 40px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	color: black;
+	border: 0;
+	border-bottom: 3px solid red;
+}
+.nav-tabs>li>a:hover {
+	border: 0;
+    border-bottom: red 3px solid;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: initial;
+}
+span.input-group-addon {
+   background-color: #9da1a3;
+   color: white;
+}
+.note-body, .panel-default>.panel-heading {
+    background-image: linear-gradient(to bottom,#1d6e86 0,#013781 100%);
+	color: white;
+}
+.panel-default>.panel-heading a{
+	color: white;
+}
+.tab-content {
+	margin-top: 1em;
+}
+.input-group-addon.glyphicon {
+	top: initial;
+}
+span.glyphicon-remove:hover {
+	color: red;
+	padding: 0.25em;
+	background-color: white;
+}
+span.glyphicon-copy:hover {
+	color: green;
+	padding: 0.25em;
+	background-color: white;
+}
+div.panel-heading>h3 {
+	display: inline;
+	padding-right: 77%
+}
