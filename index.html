@@ -1,0 +1,203 @@
+<html ng-app="NoteCreator">
+ 
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+ 
+</head>
+ 
+<body>
+   <div class="container-fluid"> 
+      <div class="row">
+         <div class="col-xs-4">
+            <img src="http://www.allianzworldwidepartners.ro/corporate/images/logo-4.png" class="img-responsive">
+         </div>
+         <div class="col-xs-8">
+            <h2>Note Creator</h2>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-xs-12">
+       
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+               <li role="presentation" class="active"><a href="#cancellation" aria-controls="cancellation" role="tab" data-toggle="tab">Cancellation</a></li>
+               <li role="presentation"><a href="#FNOL" aria-controls="FNOL" role="tab" data-toggle="tab">FNOL</a></li>
+               <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">General Inquiry</a></li>
+            </ul>
+       
+            <!-- Tab panes -->
+            <div class="tab-content">
+               <div role="tabpanel" class="tab-pane active" id="cancellation" ng-controller="CancellationCtrl">
+                  <div class="panel-group" id="canc_accordion" role="tablist" aria-multiselectable="true">
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="canc_polInfo">
+                           <h4 class="panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#canc_accordion" href="#collapse_canc_polInfo" aria-expanded="true" aria-controls="collapse_canc_polInfo">Policy Information</a>
+                           </h4>
+                        </div>
+                        <div id="collapse_canc_polInfo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="canc_polInfo">
+                           <div class="panel-body">
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-book" id="canc_pn"></span>
+                                 <input type="text" class="form-control text-uppercase" aria-describedby="canc_pn" ng-model="data.pn" placeholder="Policy #">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-user" id="canc_phn"></span>
+                                 <input type="text" class="form-control" aria-describedby="canc_phn" ng-model="data.phn" placeholder="PH's Name">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-envelope" id="canc_email"></span>
+                                 <input type="text" class="form-control" aria-describedby="canc_email" ng-model="data.email" placeholder="E-mail">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-calendar" id="canc_dop"></span>
+                                 <input type="text" class="form-control" aria-describedby="canc_dop" ng-model="data.dop" placeholder="Date of purchase">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-calendar" id="canc_doe"></span>
+                                 <input type="text" class="form-control" aria-describedby="canc_doe" ng-model="data.doe" placeholder="Date of event">
+                              </div> 
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="canc_cancDet">
+                           <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#canc_accordion" href="#collapse_cancDet" aria-expanded="false" aria-controls="collapse_cancDet">Cancellation Details</a>
+                           </h4>
+                        </div>
+                        <div id="collapse_cancDet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="canc_cancDet">
+                           <div class="panel-body">
+                              <label ng-hide="true" for="canc_cancReason">Cancellation Reason:</label>
+                              <select class="form-control" name="canc_cancReason" id="canc_cancReason" ng-options="option.reason for option in data.availableOptions track by option.id" ng-model="data.selectedOption"></select>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-usd" id="canc_amntRef"></span>
+                                 <input type="text" class="form-control" aria-describedby="canc_amntRef" ng-model="data.amntRef" placeholder="Refund amount">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-credit-card" id="canc_cardBrand"></span>
+                                 <input type="text" class="form-control text-uppercase" aria-describedby="canc_cardBrand" ng-model="data.cardBrand" placeholder="Brand of the card">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-triangle-right" id="canc_l4d"></span>
+                                 <input type="text" class="form-control" aria-describedby="canc_l4d" ng-model="data.l4d" placeholder="Last 4 digits">
+                              </div>
+                           </div>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h3 class="panel-title">Note</h3>
+                        <a class="navbar-right" href="#" ng-click="copy();"><span class="img-circle glyphicon glyphicon-copy"></span></a>
+                        <a class="navbar-right" href="#" ng-click="clear();"><span class="img-circle glyphicon glyphicon-remove"></span></a> 
+                     </div>
+                     <div id="canc_note" class="panel-body">
+                        <p>{{data.phn}} called in to cancel Policy #{{data.pn}} as {{data.selectedOption.reason}}. The Policy was purchased on {{data.dop}}, and the date of the event is {{data.doe}}.</p>
+                        <ul>
+                           <li>Letter sent to: {{data.email}},</li>
+                           <li>Amount refunded: ${{data.amntRef}},</li>
+                           <li>Refunded to a {{data.cardBrand}} that ends with {{data.l4d}}.</li>
+                        </ul>
+                        <p>Cancelled and sent fulfillment.</p>
+                     </div>
+                  </div><!--
+                  <button class="btn btn-danger" ng-click="clear();">Clear</button>                
+                  <button class="btn btn-success" ng-click="copy();">Copy</button>-->
+               </div>
+               <div role="tabpanel" class="tab-pane" id="FNOL">
+                  <div class="panel-group" id="fnol_accordion" role="tablist" aria-multiselectable="true">
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="fnol_polInfo">
+                           <h4 class="panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#fnol_accordion" href="#collapse_fnol_polInfo" aria-expanded="true" aria-controls="collapse_fnol_polInfo">Policy Information</a>
+                           </h4>
+                        </div>
+                        <div id="collapse_fnol_polInfo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="fnol_polInfo">
+                           <div class="panel-body">
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-book" id="canc_pn"></span>
+                                 <input type="text" class="form-control text-uppercase" aria-describedby="canc_pn" ng-model="data.pn" placeholder="Policy #">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-user" id="canc_phn"></span>
+                                 <input type="text" class="form-control" aria-describedby="canc_phn" ng-model="data.phn" placeholder="PH's Name">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-envelope" id="canc_email"></span>
+                                 <input type="text" class="form-control" aria-describedby="canc_email" ng-model="data.email" placeholder="E-mail">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-calendar" id="canc_dop"></span>
+                                 <input type="text" class="form-control" aria-describedby="canc_dop" ng-model="data.dop" placeholder="Date of purchase">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-calendar" id="canc_doe"></span>
+                                 <input type="text" class="form-control" aria-describedby="canc_doe" ng-model="data.doe" placeholder="Date of event">
+                              </div> 
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="canc_cancDet">
+                           <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#fnol_accordion" href="#collapse_cancDet" aria-expanded="false" aria-controls="collapse_cancDet">Cancellation Details</a>
+                           </h4>
+                        </div>
+                        <div id="collapse_cancDet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="canc_cancDet">
+                           <div class="panel-body">
+                              <label ng-hide="true" for="canc_cancReason">Cancellation Reason:</label>
+                              <select class="form-control" name="canc_cancReason" id="canc_cancReason" ng-options="option.reason for option in data.availableOptions track by option.id" ng-model="data.selectedOption"></select>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-usd" id="canc_amntRef"></span>
+                                 <input type="text" class="form-control" aria-describedby="canc_amntRef" ng-model="data.amntRef" placeholder="Refund amount">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-credit-card" id="canc_cardBrand"></span>
+                                 <input type="text" class="form-control text-uppercase" aria-describedby="canc_cardBrand" ng-model="data.cardBrand" placeholder="Brand of the card">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-triangle-right" id="canc_l4d"></span>
+                                 <input type="text" class="form-control" aria-describedby="canc_l4d" ng-model="data.l4d" placeholder="Last 4 digits">
+                              </div>
+                           </div>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h3 class="panel-title">Note</h3>
+                        <a class="navbar-right" href="#" ng-click="copy();"><span class="img-circle glyphicon glyphicon-copy"></span></a>
+                        <a class="navbar-right" href="#" ng-click="clear();"><span class="img-circle glyphicon glyphicon-remove"></span></a> 
+                     </div>
+                     <div id="canc_note" class="panel-body">
+                        <p>{{data.phn}} called in to cancel Policy #{data.pn}} as {{data.selectedOption.id}}. The Policy was purchased on {{data.dop}}, and the date of the event is {{data.doe}}.</p>
+                        <ul>
+                           <li>Letter sent to: {{data.email}},</li>
+                           <li>Amount refunded: ${{data.amntRef}},</li>
+                           <li>Refunded to a {{data.cardBrand}} that ends with {{data.l4d}}.</li>
+                        </ul>
+                        <p>Cancelled and sent fulfillment.</p>
+                     </div>
+                  </div>
+               </div>
+               <div role="tabpanel" class="tab-pane" id="gralInquiry">...</div>
+        
+         </div>
+      </div>
+   </div>
+ 
+</body>
+ 
+</html>
