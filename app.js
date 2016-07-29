@@ -12,8 +12,15 @@
 		this.availableOptions= availableOptions || [];
 		this.selectedOption= availableOptions[0] || null; //This sets the default value of the select in the ui								
 	};
+	copy = function() {
+		var urlField = document.querySelector('#canc_note');
+		var range = document.createRange();  
+		range.selectNode(urlField);
+		window.getSelection().addRange(range);
+		document.execCommand('copy');				
+		window.getSelection().removeAllRanges();
+	};
 	app.controller("CancellationCtrl", ["$scope", function($scope){
-	
     	var availableOptions = [
     	    {id: '0', reason: 'Cancellation Reason', exp: ''},
     	    {id: '1', reason: 'Unintended Purchase', exp: 'the customer made the purchase of the Policy by mistake'},
@@ -25,7 +32,7 @@
 	    $scope.data = new Policy(availableOptions);
 		$scope.clear = function(){
 			$scope.data = new Policy(availableOptions);
-		};
+		};/*
 		$scope.copy = function() {
 			var urlField = document.querySelector('#canc_note');
 			var range = document.createRange();  
@@ -33,7 +40,7 @@
 			window.getSelection().addRange(range);
 			document.execCommand('copy');				
 			window.getSelection().removeAllRanges();
-		};
+		};*/
 
 	}])	
 })();
