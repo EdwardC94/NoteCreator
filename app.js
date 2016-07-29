@@ -14,7 +14,7 @@
 		this.availableOptions= availableOptions || [];
 		this.selectedOption= availableOptions[0] || null; //This sets the default value of the select in the ui	*/							
 	};
-	function Copy (selector) {
+	function copy (selector) {
 		var urlField = document.querySelector(selector);
 		var range = document.createRange();  
 		range.selectNode(urlField);
@@ -36,7 +36,7 @@
 			$scope.data = new Policy();
 		};
 		$scope.copy = function() {
-			Copy('#canc_note');
+			copy('#canc_note');
 		};
 		/*
 		$scope.copy = function() {
