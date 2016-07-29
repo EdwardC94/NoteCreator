@@ -33,7 +33,7 @@
 		$scope.clear = function(){
 			$scope.data = new Policy(availableOptions);
 		};
-		$scope.copy = data.copy('#canc_note');
+		$scope.copy = $scope.data.copy('#canc_note');
 		/*
 		$scope.copy = function() {
 			var urlField = document.querySelector('#canc_note');
