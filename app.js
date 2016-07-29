@@ -1,6 +1,6 @@
 (function() {
 	var app = angular.module("NoteCreator", []);
-	function Policy(availableOptions) = {
+	function Policy(availableOptions){
 		this.pn : "";
 		this.phn : "";
 		this.email : "";
