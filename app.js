@@ -1,16 +1,16 @@
-(function() {
+=(function() {
 	var app = angular.module("NoteCreator", []);
 	function Policy(availableOptions){
-		this.pn : "";
-		this.phn : "";
-		this.email : "";
-		this.dop : "";
-		this.doe : "";
-		this.amntRef : "";
-		this.cardBrand : "";
-		this.l4d : "";
-		this.availableOptions: availableOptions || [];
-		this.selectedOption: availableOptions[0] || null; //This sets the default value of the select in the ui								
+		this.pn = "";
+		this.phn = "";
+		this.email = "";
+		this.dop = "";
+		this.doe = "";
+		this.amntRef = "";
+		this.cardBrand = "";
+		this.l4d = "";
+		this.availableOptions= availableOptions || [];
+		this.selectedOption= availableOptions[0] || null; //This sets the default value of the select in the ui								
 	};
 	app.controller("CancellationCtrl", ["$scope", function($scope){
 	
