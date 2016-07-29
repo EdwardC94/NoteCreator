@@ -10,7 +10,6 @@
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="app.js"></script>
-
  
 </head>
  
@@ -81,7 +80,7 @@
                               <select class="form-control" name="canc_cancReason" id="canc_cancReason" ng-options="option.reason for option in data.availableOptions track by option.id" ng-model="data.selectedOption"></select>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-usd" id="canc_amntRef"></span>
-                                 <input type="text" class="form-control" aria-describedby="canc_amntRef" ng-model="data.amntRef" placeholder="Refund amount">
+                                 <input type="text" class="form-control" aria-describedby="canc_amntRef" ng-model="data.price" placeholder="Refund amount">
                               </div>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-credit-card" id="canc_cardBrand"></span>
@@ -106,7 +105,7 @@
                         <p>{{data.phn}} called in to cancel Policy #{{data.pn}} as {{data.selectedOption.reason}}. The Policy was purchased on {{data.dop}}, and the date of the event is {{data.doe}}.</p>
                         <ul>
                            <li>Letter sent to: {{data.email}},</li>
-                           <li>Amount refunded: ${{data.amntRef}},</li>
+                           <li>Amount refunded: ${{data.price}},</li>
                            <li>Refunded to a {{data.cardBrand}} that ends with {{data.l4d}}.</li>
                         </ul>
                         <p>Cancelled and sent fulfillment.</p>
@@ -160,7 +159,7 @@
                               <select class="form-control" name="canc_cancReason" id="canc_cancReason" ng-options="option.reason for option in data.availableOptions track by option.id" ng-model="data.selectedOption"></select>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-usd" id="canc_amntRef"></span>
-                                 <input type="text" class="form-control" aria-describedby="canc_amntRef" ng-model="data.amntRef" placeholder="Refund amount">
+                                 <input type="text" class="form-control" aria-describedby="canc_amntRef" ng-model="data.price" placeholder="Refund amount">
                               </div>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-credit-card" id="canc_cardBrand"></span>
@@ -185,7 +184,7 @@
                         <p>{{data.phn}} called in to cancel Policy #{data.pn}} as {{data.selectedOption.id}}. The Policy was purchased on {{data.dop}}, and the date of the event is {{data.doe}}.</p>
                         <ul>
                            <li>Letter sent to: {{data.email}},</li>
-                           <li>Amount refunded: ${{data.amntRef}},</li>
+                           <li>Amount refunded: ${{data.price}},</li>
                            <li>Refunded to a {{data.cardBrand}} that ends with {{data.l4d}}.</li>
                         </ul>
                         <p>Cancelled and sent fulfillment.</p>
