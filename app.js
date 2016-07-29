@@ -36,7 +36,7 @@
 			$scope.data = new Policy();
 		};
 		$scope.copy = function() {
-			$scope.data.copy('#canc_note');
+			Copy('#canc_note');
 		};
 		/*
 		$scope.copy = function() {
