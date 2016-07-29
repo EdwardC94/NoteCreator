@@ -77,7 +77,7 @@
                         <div id="collapse_cancDet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="canc_cancDet">
                            <div class="panel-body">
                               <label ng-hide="true" for="canc_cancReason">Cancellation Reason:</label>
-                              <select class="form-control" name="canc_cancReason" id="canc_cancReason" ng-options="option.reason for option in data.availableOptions track by option.id" ng-model="data.selectedOption"></select>
+                              <select class="form-control" name="canc_cancReason" id="canc_cancReason" ng-options="option.reason for option in availableOptions track by option.id" ng-model="selectedOption"></select>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-usd" id="canc_amntRef"></span>
                                  <input type="text" class="form-control" aria-describedby="canc_amntRef" ng-model="data.price" placeholder="Refund amount">
@@ -102,7 +102,7 @@
                         <a class="navbar-right" href="#" ng-click="clear();"><span class="img-circle glyphicon glyphicon-remove"></span></a> 
                      </div>
                      <div id="canc_note" class="panel-body">
-                        <p>{{data.phn}} called in to cancel Policy #{{data.pn}} as {{data.selectedOption.reason}}. The Policy was purchased on {{data.dop}}, and the date of the event is {{data.doe}}.</p>
+                        <p>{{data.phn}} called in to cancel Policy #{{data.pn}} as {{selectedOption.exp}}. The Policy was purchased on {{data.dop}}, and the date of the event is {{data.doe}}.</p>
                         <ul>
                            <li>Letter sent to: {{data.email}},</li>
                            <li>Amount refunded: ${{data.price}},</li>
