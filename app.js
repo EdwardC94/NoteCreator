@@ -1,18 +1,20 @@
 (function() {
 	var app = angular.module("NoteCreator", []);
-	function Policy(availableOptions){
+	function Policy(){
 		this.pn = "";
 		this.phn = "";
-		this.email = "";
 		this.dop = "";
 		this.doe = "";
-		this.amntRef = "";
+		this.price = "";
 		this.cardBrand = "";
 		this.l4d = "";
+		this.email = "";
+		this.address = "";
+		this.phone = "";/*
 		this.availableOptions= availableOptions || [];
-		this.selectedOption= availableOptions[0] || null; //This sets the default value of the select in the ui								
+		this.selectedOption= availableOptions[0] || null; //This sets the default value of the select in the ui	*/							
 	};
-	Policy.prototype.copy = function(selector) {
+	function Copy (selector) {
 		var urlField = document.querySelector(selector);
 		var range = document.createRange();  
 		range.selectNode(urlField);
@@ -29,9 +31,9 @@
     	    {id: '4', reason: 'Did not pick up rental', exp: 'the reservation of the car was cancelled'},
     	    {id: '5', reason: 'AGA not accepted by Car Rental Agency', exp: 'the customer had to purchase insurance from a different Company, because the Car Rental Agency would not accept AGAs'}
     	    ];
-	    $scope.data = new Policy(availableOptions);
+	    $scope.data = new Policy();
 		$scope.clear = function(){
-			$scope.data = new Policy(availableOptions);
+			$scope.data = new Policy();
 		};
 		$scope.copy = function() {
 			$scope.data.copy('#canc_note');
