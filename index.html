@@ -133,16 +133,28 @@
                                  <input type="text" class="form-control" aria-describedby="fnol_phn" ng-model="data.phn" placeholder="PH's Name">
                               </div>
                               <div class="input-group">
-                                 <span class="input-group-addon glyphicon glyphicon-envelope" id="fnol_email"></span>
-                                 <input type="text" class="form-control" aria-describedby="fnol_email" ng-model="data.email" placeholder="E-mail">
-                              </div>
-                              <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_dop"></span>
                                  <input type="text" class="form-control" aria-describedby="fnol_dop" ng-model="data.dop" placeholder="Date of purchase">
                               </div>
                               <div class="input-group">
-                                 <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_doe"></span>
-                                 <input type="text" class="form-control" aria-describedby="fnol_doe" ng-model="data.doe" placeholder="Date of event">
+                                 <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_depD"></span>
+                                 <input type="date" class="form-control" aria-describedby="fnol_retD" ng-model="data.depD" placeholder="Departure date">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_retD"></span>
+                                 <input type="date" class="form-control" aria-describedby="fnol_retD" ng-model="data.retD" placeholder="Return date">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-envelope" id="fnol_address"></span>
+                                 <input type="text" class="form-control" aria-describedby="fnol_address" ng-model="data.address" placeholder="Address">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-envelope" id="fnol_phone"></span>
+                                 <input type="text" class="form-control" aria-describedby="fnol_phone" ng-model="data.phone" placeholder="Phone">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-envelope" id="fnol_email"></span>
+                                 <input type="text" class="form-control" aria-describedby="fnol_email" ng-model="data.email" placeholder="Email">
                               </div> 
                            </div>
                         </div>
@@ -183,8 +195,19 @@
                         <a class="navbar-right" href="#" ng-click="copy();"><span class="img-circle glyphicon glyphicon-copy"></span></a>
                         <a class="navbar-right" href="#" ng-click="clear();"><span class="img-circle glyphicon glyphicon-remove"></span></a> 
                      </div>
-                     <div id="canc_note" class="panel-body">
-                        <p>{{data.phn}} called in to cancel Policy #{{data.pn}} as {{data.selectedOption.id}}. The Policy was purchased on {{data.dop}}, and the date of the event is {{data.doe}}.</p>
+                     <div id="fnol_note" class="panel-body">
+                        <p>{{data.phn}} called in to file a claim, because {{selBen}} due to {{selRea}}.</p>
+                        <p>I assisted the PH to file a claim, fo which I confirmed that the next information on the Policy was correct:</p>
+                        <ul>
+                            <li>Policy #: {{data.pn}}</li>
+                            <li>Name: {{data.phn}}</li>
+                            <li>Date of purchase: {{data.dop}}</li>
+                            <li>Departure date: {{data.depD}}</li>
+                            <li>Return date: {{data.retD}}</li>
+                            <li>Address: {{data.address}}</li>
+                            <li>Phone: data.phone</li>
+                            <li>Email: {{data.email}}</li>
+                        </ul>
                         <ul>
                            <li>Letter sent to: {{data.email}},</li>
                            <li>Amount refunded: ${{data.price}},</li>
