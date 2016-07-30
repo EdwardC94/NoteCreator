@@ -4,7 +4,8 @@
 		this.pn = "";
 		this.phn = "";
 		this.dop = "";
-		this.doe = "";
+		this.depD = "";
+		this.retD = "";
 		this.price = "";
 		this.cardBrand = "";
 		this.l4d = "";
