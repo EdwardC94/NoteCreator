@@ -150,12 +150,12 @@
                      <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="fnol_claimDet">
                            <h4 class="panel-title">
-                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#fnol_accordion" href="#collapse_cancDet" aria-expanded="false" aria-controls="collapse_cancDet">Cancellation Details</a>
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#fnol_accordion" href="#collapse_fnolDet" aria-expanded="false" aria-controls="collapse_fnolDet">Claim Details</a>
                            </h4>
                         </div>
-                        <div id="collapse_cancDet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="fnol_claimDet">
+                        <div id="collapse_fnolDet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="fnol_claimDet">
                            <div class="panel-body">
-                              <label ng-hide="true" for="fnol_fnolBenefit">Cancellation Reason:</label>
+                              <label ng-hide="true" for="fnol_fnolBenefit">Claim benefit</label>
                               <select class="form-control" name="fnol_cancReason" id="fnol_fnolBenefit" ng-options="option.reason for option in data.availableOptions.benefit track by option.id" ng-model="selectedOptions.benefit"></select>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-usd" id="fnol_amntclaimed"></span>
