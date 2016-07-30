@@ -15,6 +15,7 @@
 		this.selectedOption= availableOptions[0] || null; //This sets the default value of the select in the ui	*/							
 	};
 	function FNOL() {
+	    Policy.call(this);
 	    this.dateFiled = "";
 	    this.incDate = "";
 	    this.amountClaimed = "";
@@ -57,15 +58,9 @@
 	        benefit : "",
 	        reason : ""
 	    };
-	    $scope.data = {
-	        policy: new Policy();,
-	        FNOL : new FNOL();
-	    };
+	    $scope.data = new FNOL();
 	    $scope.clear = function() {
-	        $scope.data = {
-	        policy: new Policy();,
-	        FNOL : new FNOL();
-	        };
+	        $scope.data = new FNOL();
 	        $scope.selectedOptions = {
 	        benefit : "",
 	        reason : ""
