@@ -126,23 +126,23 @@
                            <div class="panel-body">
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-book" id="fnol_pn"></span>
-                                 <input type="text" class="form-control text-uppercase" aria-describedby="fnol_pn" ng-model="data.policy.pn" placeholder="Policy #">
+                                 <input type="text" class="form-control text-uppercase" aria-describedby="fnol_pn" ng-model="data.pn" placeholder="Policy #">
                               </div>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-user" id="fnol_phn"></span>
-                                 <input type="text" class="form-control" aria-describedby="fnol_phn" ng-model="data.policy.phn" placeholder="PH's Name">
+                                 <input type="text" class="form-control" aria-describedby="fnol_phn" ng-model="data.phn" placeholder="PH's Name">
                               </div>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-envelope" id="fnol_email"></span>
-                                 <input type="text" class="form-control" aria-describedby="fnol_email" ng-model="data.policy.email" placeholder="E-mail">
+                                 <input type="text" class="form-control" aria-describedby="fnol_email" ng-model="data.email" placeholder="E-mail">
                               </div>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_dop"></span>
-                                 <input type="text" class="form-control" aria-describedby="fnol_dop" ng-model="data.policy.dop" placeholder="Date of purchase">
+                                 <input type="text" class="form-control" aria-describedby="fnol_dop" ng-model="data.dop" placeholder="Date of purchase">
                               </div>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_doe"></span>
-                                 <input type="text" class="form-control" aria-describedby="fnol_doe" ng-model="data.policy.doe" placeholder="Date of event">
+                                 <input type="text" class="form-control" aria-describedby="fnol_doe" ng-model="data.doe" placeholder="Date of event">
                               </div> 
                            </div>
                         </div>
@@ -159,7 +159,7 @@
                               <select class="form-control" name="fnol_cancReason" id="fnol_fnolBenefit" ng-options="option.reason for option in data.availableOptions.benefit track by option.id" ng-model="selectedOptions.benefit"></select>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-usd" id="fnol_amntclaimed"></span>
-                                 <input type="text" class="form-control" aria-describedby="fnol_amntclaimed" ng-model="data.FNOL.amountClaimed" placeholder="Amount Claimed">
+                                 <input type="text" class="form-control" aria-describedby="fnol_amntclaimed" ng-model="data.amountClaimed" placeholder="Amount Claimed">
                               </div>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-credit-card" id="canc_cardBrand"></span>
