@@ -49,8 +49,7 @@
 	}]);
 	app.controller("FNOLCtrl", ["$scope", function($scope){
 	    $scope.availableOptions = {
-	        benefit : ["Trip Cancellation", "Travel Delay", "Baggage Coverage", "Baggage Delay"]
-	            ],
+	        benefit : ["Trip Cancellation", "Travel Delay", "Baggage Coverage", "Baggage Delay"],
             reason : ["Illness of Insured", "Illness of family member", "Illness of TC", "Not a named peril", "Have to work during trip"
                 ]
 	    };
