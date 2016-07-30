@@ -49,11 +49,14 @@
 		};
 	}]);
 	app.controller("FNOLCtrl", ["$scope", function($scope){
-	    $scope.availableOptions = {
-	        benefit : ["Trip Cancellation", "Travel Delay", "Baggage Coverage", "Baggage Delay"],
-            reason : ["Illness of Insured", "Illness of family member", "Illness of TC", "Not a named peril", "Have to work during trip"
-                ]
-	    };
+		$scope.benefits = [
+			{id: 0, name: "Trip Cancellation", exp : "their trip was cancelled" },
+			{id: 1, name: "Trip Interruption" exp: "they have to come back earlier from their trip"},
+			{id: 2, name: "Travel Delay", exp: "their trip was delayed"},
+			{id: 3, name: "Baggage Coverage", exp: "their baggage is lost/stolen/damaged"},
+			{id: 4, name: "Baggage Delay", exp: "thair baggage was delayed"}
+			];
+	    $scope.reason = [];
 	    $scope.selectedOptions = {
 	        benefit : "",
 	        reason : ""
