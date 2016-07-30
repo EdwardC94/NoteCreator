@@ -155,19 +155,21 @@
                         </div>
                         <div id="collapse_fnolDet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="fnol_claimDet">
                            <div class="panel-body">
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_dateFiled"></span>
+                                 <input type="text" class="form-control text-uppercase" aria-describedby="fnol_dateFiled" ng-model="data.dateFiled" placeholder="FNOL date">
+                              </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_incDate"></span>
+                                 <input type="text" class="form-control text-uppercase" aria-describedby="fnol_incDate" ng-model="data.incDate" placeholder="Incurred date">
+                              </div>
                               <label ng-hide="true" for="fnol_fnolBenefit">Claim benefit</label>
-                              <select class="form-control" name="fnol_cancReason" id="fnol_fnolBenefit" ng-options="option.reason for option in data.availableOptions.benefit track by option.id" ng-model="selectedOptions.benefit"></select>
+                              <select class="form-control" name="fnol_Benefit" id="fnol_fnolBenefit" ng-options="option.name for option in data.benefits track by option.id" ng-model="selectedOptions.benefit"></select>
+                              <label ng-hide="true" for="fnol_fnolBenefit">Claim benefit</label>
+                              <select class="form-control" name="fnol_Reason" id="fnol_fnolReason" ng-options="option.name for option in data.benefits track by option.id" ng-model="selectedOptions.reason"></select>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-usd" id="fnol_amntclaimed"></span>
                                  <input type="text" class="form-control" aria-describedby="fnol_amntclaimed" ng-model="data.amountClaimed" placeholder="Amount Claimed">
-                              </div>
-                              <div class="input-group">
-                                 <span class="input-group-addon glyphicon glyphicon-credit-card" id="canc_cardBrand"></span>
-                                 <input type="text" class="form-control text-uppercase" aria-describedby="canc_cardBrand" ng-model="data.cardBrand" placeholder="Brand of the card">
-                              </div>
-                              <div class="input-group">
-                                 <span class="input-group-addon glyphicon glyphicon-triangle-right" id="canc_l4d"></span>
-                                 <input type="text" class="form-control" aria-describedby="canc_l4d" ng-model="data.l4d" placeholder="Last 4 digits">
                               </div>
                            </div>
                         </div>
