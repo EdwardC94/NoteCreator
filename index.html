@@ -114,7 +114,7 @@
                   <button class="btn btn-danger" ng-click="clear();">Clear</button>                
                   <button class="btn btn-success" ng-click="copy();">Copy</button>-->
                </div>
-               <div role="tabpanel" class="tab-pane" id="FNOL">
+               <div role="tabpanel" class="tab-pane" id="FNOL" ng-controller="FNOLCtrl">
                   <div class="panel-group" id="fnol_accordion" role="tablist" aria-multiselectable="true">
                      <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="fnol_polInfo">
@@ -126,40 +126,40 @@
                            <div class="panel-body">
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-book" id="fnol_pn"></span>
-                                 <input type="text" class="form-control text-uppercase" aria-describedby="fnol_pn" ng-model="data.pn" placeholder="Policy #">
+                                 <input type="text" class="form-control text-uppercase" aria-describedby="fnol_pn" ng-model="data.policy.pn" placeholder="Policy #">
                               </div>
                               <div class="input-group">
-                                 <span class="input-group-addon glyphicon glyphicon-user" id="canc_phn"></span>
-                                 <input type="text" class="form-control" aria-describedby="canc_phn" ng-model="data.phn" placeholder="PH's Name">
+                                 <span class="input-group-addon glyphicon glyphicon-user" id="fnol_phn"></span>
+                                 <input type="text" class="form-control" aria-describedby="fnol_phn" ng-model="data.policy.phn" placeholder="PH's Name">
                               </div>
                               <div class="input-group">
-                                 <span class="input-group-addon glyphicon glyphicon-envelope" id="canc_email"></span>
-                                 <input type="text" class="form-control" aria-describedby="canc_email" ng-model="data.email" placeholder="E-mail">
+                                 <span class="input-group-addon glyphicon glyphicon-envelope" id="fnol_email"></span>
+                                 <input type="text" class="form-control" aria-describedby="fnol_email" ng-model="data.policy.email" placeholder="E-mail">
                               </div>
                               <div class="input-group">
-                                 <span class="input-group-addon glyphicon glyphicon-calendar" id="canc_dop"></span>
-                                 <input type="text" class="form-control" aria-describedby="canc_dop" ng-model="data.dop" placeholder="Date of purchase">
+                                 <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_dop"></span>
+                                 <input type="text" class="form-control" aria-describedby="fnol_dop" ng-model="data.policy.dop" placeholder="Date of purchase">
                               </div>
                               <div class="input-group">
-                                 <span class="input-group-addon glyphicon glyphicon-calendar" id="canc_doe"></span>
-                                 <input type="text" class="form-control" aria-describedby="canc_doe" ng-model="data.doe" placeholder="Date of event">
+                                 <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_doe"></span>
+                                 <input type="text" class="form-control" aria-describedby="fnol_doe" ng-model="data.policy.doe" placeholder="Date of event">
                               </div> 
                            </div>
                         </div>
                      </div>
                      <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="canc_cancDet">
+                        <div class="panel-heading" role="tab" id="fnol_claimDet">
                            <h4 class="panel-title">
                               <a class="collapsed" role="button" data-toggle="collapse" data-parent="#fnol_accordion" href="#collapse_cancDet" aria-expanded="false" aria-controls="collapse_cancDet">Cancellation Details</a>
                            </h4>
                         </div>
-                        <div id="collapse_cancDet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="canc_cancDet">
+                        <div id="collapse_cancDet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="fnol_claimDet">
                            <div class="panel-body">
-                              <label ng-hide="true" for="canc_cancReason">Cancellation Reason:</label>
-                              <select class="form-control" name="canc_cancReason" id="canc_cancReason" ng-options="option.reason for option in data.availableOptions track by option.id" ng-model="data.selectedOption"></select>
+                              <label ng-hide="true" for="fnol_fnolBenefit">Cancellation Reason:</label>
+                              <select class="form-control" name="fnol_cancReason" id="fnol_fnolBenefit" ng-options="option.reason for option in data.availableOptions.benefit track by option.id" ng-model="selectedOptions.benefit"></select>
                               <div class="input-group">
-                                 <span class="input-group-addon glyphicon glyphicon-usd" id="canc_amntRef"></span>
-                                 <input type="text" class="form-control" aria-describedby="canc_amntRef" ng-model="data.price" placeholder="Refund amount">
+                                 <span class="input-group-addon glyphicon glyphicon-usd" id="fnol_amntclaimed"></span>
+                                 <input type="text" class="form-control" aria-describedby="fnol_amntclaimed" ng-model="data.FNOL.amountClaimed" placeholder="Amount Claimed">
                               </div>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-credit-card" id="canc_cardBrand"></span>
