@@ -14,7 +14,7 @@
 		this.availableOptions= availableOptions || [];
 		this.selectedOption= availableOptions[0] || null; //This sets the default value of the select in the ui	*/							
 	};
-	function Claim() {
+	function FNOL() {
 	    this.dateFiled = "";
 	    this.incDate = "";
 	    this.amountClaimed = "";
@@ -41,9 +41,36 @@
 	    $scope.data = new Policy();
 		$scope.clear = function(){
 			$scope.data = new Policy();
+			$scope.selectedOption = $scope.availableOptions[0];
 		};
 		$scope.copy = function() {
 			copy('#canc_note');
 		};
-	}])	
+	}]);
+	app.controller("FNOLCtrl", ["$scope", function($scope){
+	    $scope.availableOptions = {
+	        benefit : ["Trip Cancellation", "Travel Delay", "Baggage Coverage", "Baggage Delay"]
+	            ],
+            reason : ["Illness of Insured", "Illness of family member", "Illness of TC", "Not a named peril", "Have to work during trip"
+                ]
+	    };
+	    $scope.selectedOptions = {
+	        benefit : "",
+	        reason : ""
+	    };
+	    $scope.data = {
+	        policy: new Policy();,
+	        FNOL : new FNOL();
+	    };
+	    $scope.clear = function() {
+	        $scope.data = {
+	        policy: new Policy();,
+	        FNOL : new FNOL();
+	        };
+	        $scope.selectedOptions = {
+	        benefit : "",
+	        reason : ""
+	        };
+	    }
+	}]);
 })();
