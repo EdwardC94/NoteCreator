@@ -56,11 +56,15 @@
 			{id: 3, name: "Baggage Coverage", exp: "their baggage is lost/stolen/damaged"},
 			{id: 4, name: "Baggage Delay", exp: "thair baggage was delayed"}
 			];
-	    $scope.reason = [];
-	    $scope.selectedOptions = {
-	        benefit : "",
-	        reason : ""
-	    };
+	    $scope.reason = [
+			{id: 0, name: "Trip Cancellation", exp : "their trip was cancelled" },
+			{id: 1, name: "Trip Interruption", exp: "they have to come back earlier from their trip"},
+			{id: 2, name: "Travel Delay", exp: "their trip was delayed"},
+			{id: 3, name: "Baggage Coverage", exp: "their baggage is lost/stolen/damaged"},
+			{id: 4, name: "Baggage Delay", exp: "thair baggage was delayed"}
+			];
+	    $scope.selBen = "";
+	    $scope.selReas = "";
 	    $scope.data = new FNOL();
 	    $scope.clear = function() {
 	        $scope.data = new FNOL();
