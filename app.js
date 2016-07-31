@@ -57,11 +57,12 @@
 			{id: 5, name: "Baggage Delay", exp: "thair baggage was delayed"}
 			];
 	    $scope.reason = [
-			{id: 0, name: "Common Carrier delay", exp : "their trip was cancelled" },
-			{id: 1, name: "Illness/Injury of Insured", exp: "a serious illness/injury of an insured on this Policy"},
-			{id: 1, name: "Illness/Injury of FM", exp: "a serious illness/injury of a familiy member of a insured on this Policy"},
-			{id: 1, name: "Illness/Injury of TC", exp: "a serious illness/injury of a travling companionthe insured on this Policy"},
-			{id: 2, name: "Travel Delay", exp: "their trip was delayed"}
+			{id: 0, name: "Claim reason", exp : "" },
+			{id: 1, name: "Common Carrier delay", exp : "a delay by the common carrier" },
+			{id: 2, name: "Illness/Injury of Insured", exp: "a serious illness/injury of an insured on this Policy"},
+			{id: 3, name: "Illness/Injury of FM", exp: "a serious illness/injury of a familiy member of a insured on this Policy"},
+			{id: 4, name: "Illness/Injury of TC", exp: "a serious illness/injury of a travling companionthe insured on this Policy"},
+			{id: 5, name: "Travel Delay", exp: "their trip was delayed"}
 			];
 	    $scope.selBen = {id: 0, name: "Select a reason", exp : "" };
 	    $scope.selReas = "";
