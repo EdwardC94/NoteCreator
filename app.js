@@ -65,7 +65,7 @@
 			{id: 5, name: "Travel Delay", exp: "their trip was delayed"}
 			];
 	    $scope.selBen = {id: 0, name: "Select a reason", exp : "" };
-	    $scope.selReas = "";
+	    $scope.selReas = {id: 0, name: "Claim reason", exp : "" };
 	    $scope.data = new FNOL();
 	    $scope.clear = function() {
 	        $scope.data = new FNOL();
