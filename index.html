@@ -145,11 +145,11 @@
                                  <input type="text" class="form-control" aria-describedby="fnol_retD" ng-model="data.retD" placeholder="Return date">
                               </div>
                               <div class="input-group">
-                                 <span class="input-group-addon glyphicon glyphicon-envelope" id="fnol_address"></span>
+                                 <span class="input-group-addon glyphicon glyphicon glyphicon-home" id="fnol_address"></span>
                                  <input type="text" class="form-control" aria-describedby="fnol_address" ng-model="data.address" placeholder="Address">
                               </div>
                               <div class="input-group">
-                                 <span class="input-group-addon glyphicon glyphicon-envelope" id="fnol_phone"></span>
+                                 <span class="input-group-addon glyphicon glyphicon glyphicon-earphone" id="fnol_phone"></span>
                                  <input type="text" class="form-control" aria-describedby="fnol_phone" ng-model="data.phone" placeholder="Phone">
                               </div>
                               <div class="input-group">
@@ -202,7 +202,7 @@
                      <div id="fnol_note" class="panel-body">
                         <p>{{data.phn}} called in to file a claim, because {{selBen.exp}} due to {{selReas.exp}}.</p>
                         <p>I assisted the PH to file a claim, for which I confirmed that the next information on the Policy was correct:</p>
-                        <p>It is worth noting that: {{addInfo}}</p>
+                        <p>It is worth noting that: {{data.addInfo}}</p>
                         <ul>
                             <li>Policy #: {{data.pn}}</li>
                             <li>Name: {{data.phn}}</li>
