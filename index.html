@@ -196,8 +196,8 @@
                         <a class="navbar-right" href="#" ng-click="clear();"><span class="img-circle glyphicon glyphicon-remove"></span></a> 
                      </div>
                      <div id="fnol_note" class="panel-body">
-                        <p>{{data.phn}} called in to file a claim, because {{selBen}} due to {{selRea}}.</p>
-                        <p>I assisted the PH to file a claim, fo which I confirmed that the next information on the Policy was correct:</p>
+                        <p>{{data.phn}} called in to file a claim, because {{selBen.exp}} due to {{selRea.exp}}.</p>
+                        <p>I assisted the PH to file a claim, for which I confirmed that the next information on the Policy was correct:</p>
                         <ul>
                             <li>Policy #: {{data.pn}}</li>
                             <li>Name: {{data.phn}}</li>
@@ -205,15 +205,11 @@
                             <li>Departure date: {{data.depD}}</li>
                             <li>Return date: {{data.retD}}</li>
                             <li>Address: {{data.address}}</li>
-                            <li>Phone: data.phone</li>
+                            <li>Phone: {{data.phone}}</li>
                             <li>Email: {{data.email}}</li>
                         </ul>
-                        <ul>
-                           <li>Letter sent to: {{data.email}},</li>
-                           <li>Amount refunded: ${{data.price}},</li>
-                           <li>Refunded to a {{data.cardBrand}} that ends with {{data.l4d}}.</li>
-                        </ul>
-                        <p>Cancelled and sent fulfillment.</p>
+                        <p>The PH was advised of methods and timeframes to send us the required documentation. FNOL filed and fulfillment sent.</p>
+                        <p>It is worth noting that: {{addInfo}}</p>
                      </div>
                   </div>
                </div>
