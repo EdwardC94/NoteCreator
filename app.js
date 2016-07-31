@@ -11,9 +11,7 @@
 		this.l4d = "";
 		this.email = "";
 		this.address = "";
-		this.phone = "";/*
-		this.availableOptions= availableOptions || [];
-		this.selectedOption= availableOptions[0] || null; //This sets the default value of the select in the ui	*/							
+		this.phone = "";							
 	};
 	function FNOL() {
 	    Policy.call(this);
@@ -51,28 +49,30 @@
 	}]);
 	app.controller("FNOLCtrl", ["$scope", function($scope){
 		$scope.benefits = [
-			{id: 0, name: "Trip Cancellation", exp : "their trip was cancelled" },
-			{id: 1, name: "Trip Interruption", exp: "they have to come back earlier from their trip"},
-			{id: 2, name: "Travel Delay", exp: "their trip was delayed"},
-			{id: 3, name: "Baggage Coverage", exp: "their baggage is lost/stolen/damaged"},
-			{id: 4, name: "Baggage Delay", exp: "thair baggage was delayed"}
+			{id: 0, name: "Select a benefit", exp : "" },
+			{id: 1, name: "Trip Cancellation", exp : "their trip was cancelled" },
+			{id: 2, name: "Trip Interruption", exp: "they have to come back earlier from their trip"},
+			{id: 3, name: "Travel Delay", exp: "their trip was delayed"},
+			{id: 4, name: "Baggage Coverage", exp: "their baggage is lost/stolen/damaged"},
+			{id: 5, name: "Baggage Delay", exp: "thair baggage was delayed"}
 			];
 	    $scope.reason = [
-			{id: 0, name: "Trip Cancellation", exp : "their trip was cancelled" },
-			{id: 1, name: "Trip Interruption", exp: "they have to come back earlier from their trip"},
-			{id: 2, name: "Travel Delay", exp: "their trip was delayed"},
-			{id: 3, name: "Baggage Coverage", exp: "their baggage is lost/stolen/damaged"},
-			{id: 4, name: "Baggage Delay", exp: "thair baggage was delayed"}
+			{id: 0, name: "Common Carrier delay", exp : "their trip was cancelled" },
+			{id: 1, name: "Illness/Injury of Insured", exp: "a serious illness/injury of an insured on this Policy"},
+			{id: 1, name: "Illness/Injury of FM", exp: "a serious illness/injury of a familiy member of a insured on this Policy"},
+			{id: 1, name: "Illness/Injury of TC", exp: "a serious illness/injury of a travling companionthe insured on this Policy"},
+			{id: 2, name: "Travel Delay", exp: "their trip was delayed"}
 			];
-	    $scope.selBen = "";
+	    $scope.selBen = {id: 0, name: "Select a reason", exp : "" };
 	    $scope.selReas = "";
 	    $scope.data = new FNOL();
 	    $scope.clear = function() {
 	        $scope.data = new FNOL();
-	        $scope.selectedOptions = {
-	        benefit : "",
-	        reason : ""
-	        };
-	    }
+    	    $scope.selBen = {id: 0, name: "Select a reason", exp : "" };
+    	    $scope.selReas = "";
+	    };
+		$scope.copy = function() {
+			copy('#fnol_note');
+		};
 	}]);
 })();
