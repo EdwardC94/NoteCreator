@@ -102,7 +102,7 @@
                         <a class="navbar-right" href="#" ng-click="clear();"><span class="img-circle glyphicon glyphicon-remove"></span></a> 
                      </div>
                      <div id="canc_note" class="panel-body">
-                        <p>{{data.phn}} called in to cancel Policy #{{data.pn}} as {{selectedOption.exp}}. The Policy was purchased on {{data.dop}}, and the date of the event is {{data.doe}}.</p>
+                        <p>{{data.phn}} called in to cancel Policy #{{data.pn}} as {{selectedOption.exp}}. The Policy was purchased on {{data.dop}}. Coverage from {{depD}} to {{retD}}.</p>
                         <ul>
                            <li>Letter sent to: {{data.email}},</li>
                            <li>Amount refunded: ${{data.price}},</li>
@@ -202,6 +202,7 @@
                      <div id="fnol_note" class="panel-body">
                         <p>{{data.phn}} called in to file a claim, because {{selBen.exp}} due to {{selReas.exp}}.</p>
                         <p>I assisted the PH to file a claim, for which I confirmed that the next information on the Policy was correct:</p>
+                        <p>It is worth noting that: {{addInfo}}</p>
                         <ul>
                             <li>Policy #: {{data.pn}}</li>
                             <li>Name: {{data.phn}}</li>
@@ -213,7 +214,6 @@
                             <li>Email: {{data.email}}</li>
                         </ul>
                         <p>The PH was advised of methods and timeframes to send us the required documentation. FNOL filed and fulfillment sent.</p>
-                        <p>It is worth noting that: {{addInfo}}</p>
                      </div>
                   </div>
                </div>
