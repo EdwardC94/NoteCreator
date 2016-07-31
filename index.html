@@ -138,11 +138,11 @@
                               </div>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_depD"></span>
-                                 <input type="date" class="form-control" aria-describedby="fnol_retD" ng-model="data.depD" placeholder="Departure date">
+                                 <input type="text" class="form-control" aria-describedby="fnol_retD" ng-model="data.depD" placeholder="Departure date">
                               </div>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_retD"></span>
-                                 <input type="date" class="form-control" aria-describedby="fnol_retD" ng-model="data.retD" placeholder="Return date">
+                                 <input type="text" class="form-control" aria-describedby="fnol_retD" ng-model="data.retD" placeholder="Return date">
                               </div>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-envelope" id="fnol_address"></span>
@@ -184,6 +184,10 @@
                                  <span class="input-group-addon glyphicon glyphicon-usd" id="fnol_amntclaimed"></span>
                                  <input type="text" class="form-control" aria-describedby="fnol_amntclaimed" ng-model="data.amountClaimed" placeholder="Amount Claimed">
                               </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon glyphicon glyphicon glyphicon-plus" id="fnol_addInfo"></span>
+                                 <input type="text" class="form-control" aria-describedby="fnol_addInfo" ng-model="data.addInfo" placeholder="Additional information">
+                              </div>
                            </div>
                         </div>
                       </div>
@@ -196,7 +200,7 @@
                         <a class="navbar-right" href="#" ng-click="clear();"><span class="img-circle glyphicon glyphicon-remove"></span></a> 
                      </div>
                      <div id="fnol_note" class="panel-body">
-                        <p>{{data.phn}} called in to file a claim, because {{selBen.exp}} due to {{selRea.exp}}.</p>
+                        <p>{{data.phn}} called in to file a claim, because {{selBen.exp}} due to {{selReas.exp}}.</p>
                         <p>I assisted the PH to file a claim, for which I confirmed that the next information on the Policy was correct:</p>
                         <ul>
                             <li>Policy #: {{data.pn}}</li>
