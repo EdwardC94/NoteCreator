@@ -68,7 +68,7 @@ span.glyphicon-copy:hover {
 	padding: 0.25em;
 	background-color: white;
 }
-div.panel-heading>h3 {
+div.panel-heading>h3.note {
 	display: inline;
 	padding-right: 77%
 }
