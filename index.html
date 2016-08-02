@@ -120,7 +120,7 @@
                </div>
                <div role="tabpanel" class="tab-pane" id="FNOL" ng-controller="FNOLCtrl">
                   <div class="panel-group" id="fnol_accordion" role="tablist" aria-multiselectable="true">
-                     <div class="panel panel-default">
+                      <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="fnol_polInfo">
                            <h4 class="panel-title">
                               <a role="button" data-toggle="collapse" data-parent="#fnol_accordion" href="#collapse_fnol_polInfo" aria-expanded="true" aria-controls="collapse_fnol_polInfo">Policy Information</a>
@@ -221,7 +221,53 @@
                      </div>
                   </div>
                </div>
-               <div role="tabpanel" class="tab-pane" id="gralInquiry">...</div>
+               <div role="tabpanel" class="tab-pane" id="gralInquiry">
+                   <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h3 class="panel-title">Call details</h3>
+                     </div>
+                     <div id="gral_note" class="panel-body">
+                         <div class="input-group">
+                             <span class="input-group-addon glyphicon glyphicon-book" id="gral_pn"></span>
+                             <input type="text" class="form-control text-uppercase" aria-describedby="gral_pn" ng-model="data.pn" placeholder="Policy #">
+                         </div>
+                         <div class="input-group">
+                             <span class="input-group-addon glyphicon glyphicon-user" id="gral_phn"></span>
+                             <input type="text" class="form-control" aria-describedby="gral_phn" ng-model="data.phn" placeholder="Caller's Name">
+                         </div>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h3 class="panel-title">Note</h3>
+                        <a class="navbar-right" href="#" ng-click="copy();"><span class="img-circle glyphicon glyphicon-copy"></span></a>
+                        <a class="navbar-right" href="#" ng-click="clear();"><span class="img-circle glyphicon glyphicon-remove"></span></a>
+                        <label ng-hide="true" for="gral_gralBenefit">Nature of the call</label>
+                        <select class="form-control" name="gral_gralBenefit" id="gral_fnolBenefit" ng-model="selReason" ng-options="item for item in items"></select>
+                        <div ng-switch on="selReason">
+                            <div class="animate-switch" ng-switch-when="settings">Settings Div</div>
+                            <div class="animate-switch" ng-switch-when="home">Home Span</div>
+                            <div class="animate-switch" ng-switch-default>default</div>
+                        </div>
+                     </div>
+                     <div id="gral_note" class="panel-body">
+                        <p>{{data.phn}} called in to file a claim, because {{selBen.exp}} due to {{selReas.exp}}.</p>
+                        <p>I assisted the PH to file a claim, for which I confirmed that the next information on the Policy was correct:</p>
+                        <p>It is worth noting that: {{data.addInfo}}</p>
+                        <ul>
+                            <li>Policy #: {{data.pn}}</li>
+                            <li>Name: {{data.phn}}</li>
+                            <li>Date of purchase: {{data.dop}}</li>
+                            <li>Departure date: {{data.depD}}</li>
+                            <li>Return date: {{data.retD}}</li>
+                            <li>Address: {{data.address}}</li>
+                            <li>Phone: {{data.phone}}</li>
+                            <li>Email: {{data.email}}</li>
+                        </ul>
+                        <p>The PH was advised of methods and timeframes to send us the required documentation. FNOL filed and fulfillment sent.</p>
+                     </div>
+                  </div>
+               </div>
         
          </div>
       </div>
