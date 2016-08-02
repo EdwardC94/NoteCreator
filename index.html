@@ -221,12 +221,22 @@
                      </div>
                   </div>
                </div>
-               <div role="tabpanel" class="tab-pane" id="gralInquiry">
+               <div role="tabpanel" class="tab-pane" id="gralInquiry" ng-controller="GralInqCtrl" >
                    <div class="panel panel-default">
                      <div class="panel-heading">
                         <h3 class="panel-title">Call details</h3>
                      </div>
                      <div id="gral_note" class="panel-body">
+                         <label ng-hide="true" for="gral_gralBenefit">Nature of the call</label>
+                         <select class="form-control" name="gral_gralBenefit" id="gral_fnolBenefit" ng-model="selReason" ng-options="item for item in natCall"></select>
+                         <div ng-switch on="selReason">
+                            <div class="animate-switch" ng-switch-when="Nature of the call">Settings Div</div>
+                            <div class="animate-switch" ng-switch-when="Coverage question">Home Span</div>
+                            <div class="animate-switch" ng-switch-when="Claim follow-up">Home Span</div>
+                            <div class="animate-switch" ng-switch-when="Modify Policy">Home Span</div>
+                            <div class="animate-switch" ng-switch-when="Purchase insurance">Home Span</div>
+                            <div class="animate-switch" ng-switch-default>default</div>
+                         </div>
                          <div class="input-group">
                              <span class="input-group-addon glyphicon glyphicon-book" id="gral_pn"></span>
                              <input type="text" class="form-control text-uppercase" aria-describedby="gral_pn" ng-model="data.pn" placeholder="Policy #">
@@ -237,18 +247,11 @@
                          </div>
                      </div>
                   </div>
-                  <div class="panel panel-default">
+                   <!--<div class="panel panel-default">
                      <div class="panel-heading">
                         <h3 class="panel-title">Note</h3>
                         <a class="navbar-right" href="#" ng-click="copy();"><span class="img-circle glyphicon glyphicon-copy"></span></a>
                         <a class="navbar-right" href="#" ng-click="clear();"><span class="img-circle glyphicon glyphicon-remove"></span></a>
-                        <label ng-hide="true" for="gral_gralBenefit">Nature of the call</label>
-                        <select class="form-control" name="gral_gralBenefit" id="gral_fnolBenefit" ng-model="selReason" ng-options="item for item in items"></select>
-                        <div ng-switch on="selReason">
-                            <div class="animate-switch" ng-switch-when="settings">Settings Div</div>
-                            <div class="animate-switch" ng-switch-when="home">Home Span</div>
-                            <div class="animate-switch" ng-switch-default>default</div>
-                        </div>
                      </div>
                      <div id="gral_note" class="panel-body">
                         <p>{{data.phn}} called in to file a claim, because {{selBen.exp}} due to {{selReas.exp}}.</p>
@@ -266,7 +269,7 @@
                         </ul>
                         <p>The PH was advised of methods and timeframes to send us the required documentation. FNOL filed and fulfillment sent.</p>
                      </div>
-                  </div>
+                  </div>-->
                </div>
         
          </div>
