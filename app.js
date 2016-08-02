@@ -76,4 +76,9 @@
 			copy('#fnol_note');
 		};
 	}]);
+	app.controller("GralInqCtrl", ["$scope", function($scope){
+	    $scope.data = new FNOL();
+	    $scope.selReason = $scope.natCall[0];
+	    $scope.natCall = ["Nature of the call", "Coverage question", "Claim follow-up", "Modify Policy", "Purchase insurance"]
+	}]);
 })();
