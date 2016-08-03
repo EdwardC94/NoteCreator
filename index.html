@@ -205,8 +205,8 @@
                      </div>
                      <div id="fnol_note" class="panel-body">
                         <p>{{data.phn}} called in to file a claim, because {{selBen.exp}} due to {{selReas.exp}}.</p>
-                        <p>I assisted the PH to file a claim, for which I confirmed that the next information on the Policy was correct:</p>
                         <p>It is worth noting that: {{data.addInfo}}</p>
+                        <p>I assisted the PH to file a claim, for which I confirmed that the next information on the Policy was correct:</p>
                         <ul>
                             <li>Policy #: {{data.pn}}</li>
                             <li>Name: {{data.phn}}</li>
@@ -216,6 +216,17 @@
                             <li>Address: {{data.address}}</li>
                             <li>Phone: {{data.phone}}</li>
                             <li>Email: {{data.email}}</li>
+                        </ul>
+                        <p>Summary of claim:</p>
+                        <ul>
+                            <!--this.dateFiled = "";
+	    this.incDate = "";
+	    this.amountClaimed = "";
+	    this.addInfo = "";-->
+                            <li>FNOL date: {{data.dateFile}}</li>
+                            <li>Incurred date: {{data.incDate}}</li>
+                            <li>Amount Claimed: {{data.amountClaimed}}</li>
+                            <li ng-if=""></li>
                         </ul>
                         <p>The PH was advised of methods and timeframes to send us the required documentation. FNOL filed and fulfillment sent.</p>
                      </div>
@@ -238,12 +249,12 @@
                              <input type="text" class="form-control" aria-describedby="gral_phn" ng-model="data.phn" placeholder="Caller's Name">
                          </div>
                          <div ng-switch on="selReason">
-                            <div class="animate-switch" ng-switch-when="Nature of the call">Settings Div</div>
-                            <div class="animate-switch" ng-switch-when="Coverage question">Home Span</div>
-                            <div class="animate-switch" ng-switch-when="Claim follow-up">Home Span</div>
-                            <div class="animate-switch" ng-switch-when="Modify Policy">Home Span</div>
-                            <div class="animate-switch" ng-switch-when="Purchase insurance">Home Span</div>
-                            <div class="animate-switch" ng-switch-default>default</div>
+                            <div ng-switch-when="Nature of the call">Settings Div</div>
+                            <div ng-switch-when="Coverage question">Home Span</div>
+                            <div ng-switch-when="Claim follow-up">Home Span</div>
+                            <div ng-switch-when="Modify Policy">Home Span</div>
+                            <div ng-switch-when="Purchase insurance">Home Span</div>
+                            <div ng-switch-default>default</div>
                          </div>
                      </div>
                   </div>
