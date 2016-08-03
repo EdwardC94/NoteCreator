@@ -54,15 +54,17 @@
 			{id: 2, name: "Trip Interruption", exp: "they have to come back earlier from their trip"},
 			{id: 3, name: "Travel Delay", exp: "their trip was delayed"},
 			{id: 4, name: "Baggage Coverage", exp: "their baggage is lost/stolen/damaged"},
-			{id: 5, name: "Baggage Delay", exp: "thair baggage was delayed"}
+			{id: 5, name: "Baggage Delay", exp: "their baggage was delayed"},
+			{id: 6, name: "Missed Connection", exp: "they missed their connecting flight"}
 			];
 	    $scope.reason = [
 			{id: 0, name: "Claim reason", exp : "" },
 			{id: 1, name: "Common Carrier delay", exp : "a delay by the common carrier" },
 			{id: 2, name: "Illness/Injury of Insured", exp: "a serious illness/injury of an insured on this Policy"},
-			{id: 3, name: "Illness/Injury of FM", exp: "a serious illness/injury of a familiy member of a insured on this Policy"},
-			{id: 4, name: "Illness/Injury of TC", exp: "a serious illness/injury of a travling companionthe insured on this Policy"},
-			{id: 5, name: "Travel Delay", exp: "their trip was delayed"}
+			{id: 3, name: "Illness/Injury of FM", exp: "a serious illness/injury of a familiy member of an insured on this Policy"},
+			{id: 4, name: "Illness/Injury of TC", exp: "a serious illness/injury of a traveling companion of the insured on this Policy"},
+			{id: 5, name: "Bad weather", exp: "bad weather while en route."},
+			{id: 6: name: "Death of a family member", exp: "the death of a family member of one of the insureds on this Policy."}
 			];
 	    $scope.selBen = {id: 0, name: "Select a reason", exp : "" };
 	    $scope.selReas = {id: 0, name: "Claim reason", exp : "" };
