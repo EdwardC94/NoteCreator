@@ -64,7 +64,7 @@
 			{id: 3, name: "Illness/Injury of FM", exp: "a serious illness/injury of a familiy member of an insured on this Policy"},
 			{id: 4, name: "Illness/Injury of TC", exp: "a serious illness/injury of a traveling companion of the insured on this Policy"},
 			{id: 5, name: "Bad weather", exp: "bad weather while en route."},
-			{id: 6: name: "Death of a family member", exp: "the death of a family member of one of the insureds on this Policy."}
+			{id: 6, name: "Death of a family member", exp: "the death of a family member of one of the insureds on this Policy."}
 			];
 	    $scope.selBen = {id: 0, name: "Select a reason", exp : "" };
 	    $scope.selReas = {id: 0, name: "Claim reason", exp : "" };
@@ -72,7 +72,7 @@
 	    $scope.clear = function() {
 	        $scope.data = new FNOL();
     	    $scope.selBen = {id: 0, name: "Select a reason", exp : "" };
-    	    $scope.selReas = "";
+    	    $scope.selReas = {id: 0, name: "Claim reason", exp : "" };
 	    };
 		$scope.copy = function() {
 			copy('#fnol_note');
