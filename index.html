@@ -114,9 +114,7 @@
                         </ul>
                         <p>Cancelled and sent fulfillment.</p>
                      </div>
-                  </div><!--
-                  <button class="btn btn-danger" ng-click="clear();">Clear</button>                
-                  <button class="btn btn-success" ng-click="copy();">Copy</button>-->
+                  </div>
                </div>
                <div role="tabpanel" class="tab-pane" id="FNOL" ng-controller="FNOLCtrl">
                   <div class="panel-group" id="fnol_accordion" role="tablist" aria-multiselectable="true">
@@ -179,7 +177,6 @@
                                  <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_incDate"></span>
                                  <input type="text" class="form-control text-uppercase" aria-describedby="fnol_incDate" ng-model="data.incDate" placeholder="Incurred date">
                               </div>
-                              <!--<select class="form-control" name="canc_cancReason" id="canc_cancReason" ng-options="option.reason for option in availableOptions track by option.id" ng-model="selectedOption"></select>-->
                               <label ng-hide="true" for="fnol_fnolBenefit">Claim benefit</label>
                               <select class="form-control" name="fnol_fnolBenefit" id="fnol_fnolBenefit" ng-options="option.name for option in benefits track by option.id" ng-model="selBen"></select>
                               <label ng-hide="true" for="fnol_fnolBenefit">Claim benefit</label>
@@ -210,15 +207,14 @@
                             <li>Policy #: {{data.pn}}</li>
                             <li>Name: {{data.phn}}</li>
                             <li>Date of purchase: {{data.dop}}</li>
-                            <li>Departure date: {{data.depD}}</li>
-                            <li>Return date: {{data.retD}}</li>
+                            <li>Covered period: {{data.depD}} - {{data.retD}}</li>
                             <li>Address: {{data.address}}</li>
                             <li>Phone: {{data.phone}}</li>
                             <li>Email: {{data.email}}</li>
                         </ul>
                         <p>Summary of claim:</p>
                         <ul>
-                            <li>FNOL date: {{data.dateFile}}</li>
+                            <li>FNOL date: {{data.dateFiled}}</li>
                             <li>Incurred date: {{data.incDate}}</li>
                             <li>Amount Claimed: {{data.amountClaimed}}</li>
                             <li ng-hide="data.addInfo == '' ">It is worth noting that: {{data.addInfo}}</li>
@@ -227,7 +223,7 @@
                      </div>
                   </div>
                </div>
-               <div role="tabpanel" class="tab-pane" id="gralInquiry" ng-controller="GralInqCtrl" >
+               <div role="tabpanel" class="tab-pane" id="gralInquiry" ng-controller="GralInqCtrl">
                    <div class="panel panel-default">
                      <div class="panel-heading">
                         <h3 class="panel-title">Call details</h3>
@@ -244,8 +240,13 @@
                              <input type="text" class="form-control" aria-describedby="gral_phn" ng-model="data.phn" placeholder="Caller's Name">
                          </div>
                          <div ng-switch on="selReason">
-                            <div ng-switch-when="Nature of the call">Settings Div</div>
-                            <div ng-switch-when="Coverage question">Home Span</div>
+                            <div ng-switch-when="Nature of the call"></div>
+                            <div ng-switch-when="Coverage question">
+                                <div class="input-group">
+                                    <span class="input-group-addon glyphicon glyphicon-question-sign" id="gral_covered"></span>
+                                    <input type="text" class="form-control" aria-describedby="gral_covered" ng-model="data.covered" placeholder="Peril">
+                                </div>
+                            </div>
                             <div ng-switch-when="Claim follow-up">Home Span</div>
                             <div ng-switch-when="Modify Policy">Home Span</div>
                             <div ng-switch-when="Purchase insurance">Home Span</div>
