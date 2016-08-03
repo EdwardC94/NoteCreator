@@ -229,14 +229,6 @@
                      <div id="gral_note" class="panel-body">
                          <label ng-hide="true" for="gral_gralBenefit">Nature of the call</label>
                          <select class="form-control" name="gral_gralBenefit" id="gral_fnolBenefit" ng-model="selReason" ng-options="item for item in natCall"></select>
-                         <div ng-switch on="selReason">
-                            <div class="animate-switch" ng-switch-when="Nature of the call">Settings Div</div>
-                            <div class="animate-switch" ng-switch-when="Coverage question">Home Span</div>
-                            <div class="animate-switch" ng-switch-when="Claim follow-up">Home Span</div>
-                            <div class="animate-switch" ng-switch-when="Modify Policy">Home Span</div>
-                            <div class="animate-switch" ng-switch-when="Purchase insurance">Home Span</div>
-                            <div class="animate-switch" ng-switch-default>default</div>
-                         </div>
                          <div class="input-group">
                              <span class="input-group-addon glyphicon glyphicon-book" id="gral_pn"></span>
                              <input type="text" class="form-control text-uppercase" aria-describedby="gral_pn" ng-model="data.pn" placeholder="Policy #">
@@ -244,6 +236,14 @@
                          <div class="input-group">
                              <span class="input-group-addon glyphicon glyphicon-user" id="gral_phn"></span>
                              <input type="text" class="form-control" aria-describedby="gral_phn" ng-model="data.phn" placeholder="Caller's Name">
+                         </div>
+                         <div ng-switch on="selReason">
+                            <div class="animate-switch" ng-switch-when="Nature of the call">Settings Div</div>
+                            <div class="animate-switch" ng-switch-when="Coverage question">Home Span</div>
+                            <div class="animate-switch" ng-switch-when="Claim follow-up">Home Span</div>
+                            <div class="animate-switch" ng-switch-when="Modify Policy">Home Span</div>
+                            <div class="animate-switch" ng-switch-when="Purchase insurance">Home Span</div>
+                            <div class="animate-switch" ng-switch-default>default</div>
                          </div>
                      </div>
                   </div>
