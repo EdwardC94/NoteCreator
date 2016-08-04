@@ -242,7 +242,6 @@
                          <div ng-switch on="selReason">
                             <div ng-switch-when="Nature of the call"></div>
                             <div ng-switch-when="Coverage question">
-                                <p>{{cov_options.reason}}</p>
                                 <div class="input-group">
                                     <span class="input-group-addon glyphicon glyphicon-question-sign" id="gral_covered"></span>
                                     <input type="text" class="form-control" aria-describedby="gral_covered" ng-model="cov_options.reason" placeholder="Peril">
@@ -250,6 +249,7 @@
                                         <input type="checkbox" ng-model="cov_options.checked">
                                     </span>
                                 </div>
+                                <p>{{cov_options.checked}}</p>
                             </div>
                             <div ng-switch-when="Claim follow-up">Home Span</div>
                             <div ng-switch-when="Modify Policy">Home Span</div>
