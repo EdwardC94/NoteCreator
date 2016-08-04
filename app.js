@@ -83,7 +83,7 @@
 	    $scope.natCall = ["Nature of the call", "Coverage question", "Claim follow-up", "Modify Policy", "Purchase insurance"];
 	    $scope.selReason = $scope.natCall[0];
 	    /*The objects specific to covered reasons notes*/
-	    $scope.cov_checked = false;
+	    $scope.cov_checked = "";
 	    $scope.cov_reason = "";
 	}]);
 })();
