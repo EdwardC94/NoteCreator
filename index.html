@@ -242,12 +242,12 @@
                          <div ng-switch on="selReason">
                             <div ng-switch-when="Nature of the call"></div>
                             <div ng-switch-when="Coverage question">
-                                <p>{{cov_checked}}</p>
+                                <p>{{cov_options.reason}}</p>
                                 <div class="input-group">
                                     <span class="input-group-addon glyphicon glyphicon-question-sign" id="gral_covered"></span>
-                                    <input type="text" class="form-control" aria-describedby="gral_covered" ng-model="cov_checked" placeholder="Peril">
+                                    <input type="text" class="form-control" aria-describedby="gral_covered" ng-model="cov_options.reason" placeholder="Peril">
                                     <span class="input-group-addon">
-                                        <input type="checkbox" ng-model>
+                                        <input type="checkbox" ng-model="cov_options.checked">
                                     </span>
                                 </div>
                             </div>
@@ -265,7 +265,7 @@
                         <a class="navbar-right" href="#" ng-click="clear();"><span class="img-circle glyphicon glyphicon-remove"></span></a>
                      </div>
                      <div id="gral_note" class="panel-body">
-                         <p>{{data.phn}} called in to know if {{cov_reason}} is covered on this Policy. Advised that <span>{{ cov_checked === true ? "that would be covered by the Policy" : "unfortunately that is not covered by the Policy"}}</span></p>
+                         <p>{{data.phn}} called in to know if {{cov_options.reason}} is covered on this Policy. Advised that <span>{{ cov_options.checked ? "that would be covered by the Policy" : "unfortunately that is not covered by the Policy"}}</span></p>
                      </div>
                   </div>
                </div>
