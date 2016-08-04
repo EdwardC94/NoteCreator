@@ -244,9 +244,9 @@
                             <div ng-switch-when="Coverage question">
                                 <div class="input-group">
                                     <span class="input-group-addon glyphicon glyphicon-question-sign" id="gral_covered"></span>
-                                    <input type="text" class="form-control" aria-describedby="gral_covered" ng-model="data.covered" placeholder="Peril">
+                                    <input type="text" class="form-control" aria-describedby="gral_covered" ng-model="cov_checked" placeholder="Peril">
                                     <span class="input-group-addon">
-                                        <input type="checkbox">
+                                        <input type="checkbox" ng-model>
                                     </span>
                                 </div>
                             </div>
@@ -257,29 +257,16 @@
                          </div>
                      </div>
                   </div>
-                   <!--<div class="panel panel-default">
+                   <div class="panel panel-default">
                      <div class="panel-heading">
                         <h3 class="panel-title">Note</h3>
                         <a class="navbar-right" href="#" ng-click="copy();"><span class="img-circle glyphicon glyphicon-copy"></span></a>
                         <a class="navbar-right" href="#" ng-click="clear();"><span class="img-circle glyphicon glyphicon-remove"></span></a>
                      </div>
                      <div id="gral_note" class="panel-body">
-                        <p>{{data.phn}} called in to file a claim, because {{selBen.exp}} due to {{selReas.exp}}.</p>
-                        <p>I assisted the PH to file a claim, for which I confirmed that the next information on the Policy was correct:</p>
-                        <p>It is worth noting that: {{data.addInfo}}</p>
-                        <ul>
-                            <li>Policy #: {{data.pn}}</li>
-                            <li>Name: {{data.phn}}</li>
-                            <li>Date of purchase: {{data.dop}}</li>
-                            <li>Departure date: {{data.depD}}</li>
-                            <li>Return date: {{data.retD}}</li>
-                            <li>Address: {{data.address}}</li>
-                            <li>Phone: {{data.phone}}</li>
-                            <li>Email: {{data.email}}</li>
-                        </ul>
-                        <p>The PH was advised of methods and timeframes to send us the required documentation. FNOL filed and fulfillment sent.</p>
+                         <p>{{data.phn}} called in to know if {{cov_reason}} is covered on this Policy. Advised that <span>{{cov_checked ? that would be covered by the Policy : unfortunately that is not covered by the Policy}}</span></p>
                      </div>
-                  </div>-->
+                  </div>
                </div>
         
          </div>
