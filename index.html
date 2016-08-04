@@ -239,6 +239,7 @@
                              <span class="input-group-addon glyphicon glyphicon-user" id="gral_phn"></span>
                              <input type="text" class="form-control" aria-describedby="gral_phn" ng-model="data.phn" placeholder="Caller's Name">
                          </div>
+                         <p>{{test}}</p>
                          <div ng-switch on="selReason">
                             <div ng-switch-when="Nature of the call"></div>
                             <div ng-switch-when="Coverage question">
@@ -249,7 +250,7 @@
                                         <input type="checkbox" ng-model="cov_options.checked">
                                     </span>
                                 </div>
-                                <p>{{cov_options.checked}}</p>
+                                <p>{{test}}</p>
                             </div>
                             <div ng-switch-when="Claim follow-up">Home Span</div>
                             <div ng-switch-when="Modify Policy">Home Span</div>
@@ -267,6 +268,7 @@
                      <div id="gral_note" class="panel-body">
                          <p>{{data.phn}} called in to know if {{cov_options.reason}} is covered on this Policy. Advised that <span>{{ cov_options.checked ? "that would be covered by the Policy" : "unfortunately that is not covered by the Policy"}}</span></p>
                          <p>{{cov_options.checked}} and {{cov_options.reason}}</p>
+                         <p>{{test}}</p>
                      </div>
                   </div>
                </div>
