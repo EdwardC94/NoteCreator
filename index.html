@@ -242,6 +242,7 @@
                          <div ng-switch on="selReason">
                             <div ng-switch-when="Nature of the call"></div>
                             <div ng-switch-when="Coverage question">
+                                <p>{{cov_checked}}</p>
                                 <div class="input-group">
                                     <span class="input-group-addon glyphicon glyphicon-question-sign" id="gral_covered"></span>
                                     <input type="text" class="form-control" aria-describedby="gral_covered" ng-model="cov_checked" placeholder="Peril">
