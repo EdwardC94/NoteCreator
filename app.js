@@ -87,6 +87,5 @@
 	        checked : true,
 	        reason : ""
 	    }
-	    $scope.test = "Works!!!"
 	}]);
 })();
