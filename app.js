@@ -15,6 +15,7 @@
 	};
 	function FNOL() {
 	    Policy.call(this);
+	    this.claimN = "";
 	    this.dateFiled = "";
 	    this.incDate = "";
 	    this.amountClaimed = "";
