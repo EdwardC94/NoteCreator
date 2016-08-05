@@ -169,6 +169,10 @@
                         </div>
                         <div id="collapse_fnolDet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="fnol_claimDet">
                            <div class="panel-body">
+                              <label ng-hide="true" for="fnol_fnolBenefit">Claim benefit</label>
+                              <select class="form-control" name="fnol_fnolBenefit" id="fnol_fnolBenefit" ng-options="option.name for option in benefits track by option.id" ng-model="selBen"></select>
+                              <label ng-hide="true" for="fnol_fnolBenefit">Claim benefit</label>
+                              <select class="form-control" name="fnol_fnolReason" id="fnol_fnolReason" ng-options="option.name for option in reason track by option.id" ng-model="selReas"></select>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-book" id="fnol_claimN"></span>
                                  <input type="text" class="form-control text-uppercase" aria-describedby="fnol_claimN" ng-model="data.claimN" placeholder="Claim number">
@@ -181,10 +185,6 @@
                                  <span class="input-group-addon glyphicon glyphicon-calendar" id="fnol_incDate"></span>
                                  <input type="text" class="form-control text-uppercase" aria-describedby="fnol_incDate" ng-model="data.incDate" placeholder="Incurred date">
                               </div>
-                              <label ng-hide="true" for="fnol_fnolBenefit">Claim benefit</label>
-                              <select class="form-control" name="fnol_fnolBenefit" id="fnol_fnolBenefit" ng-options="option.name for option in benefits track by option.id" ng-model="selBen"></select>
-                              <label ng-hide="true" for="fnol_fnolBenefit">Claim benefit</label>
-                              <select class="form-control" name="fnol_fnolReason" id="fnol_fnolReason" ng-options="option.name for option in reason track by option.id" ng-model="selReas"></select>
                               <div class="input-group">
                                  <span class="input-group-addon glyphicon glyphicon-usd" id="fnol_amntclaimed"></span>
                                  <input type="text" class="form-control" aria-describedby="fnol_amntclaimed" ng-model="data.amountClaimed" placeholder="Amount Claimed">
