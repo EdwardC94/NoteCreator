@@ -1,4 +1,4 @@
-<html>
+<html ng-app="NoteApplication">
 <head>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,78 +12,67 @@
  
 </head>
 <body>
-    <!--<div ng-controller="GralCtrl" class="container-fluid">
+    <div ng-controller="GralCtrl" class="container-fluid">
         <div class="row">
             <div class="col-xs-12">
-                <ul class="nav nav-tabs" role="tablist">
-                   <li role="presentation" class="active"><a href="#defaultedthing" aria-controls="defaultedthing" role="tab" data-toggle="tab">defaultedthing</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="tab-content">
-                   <div role="tabpanel" class="tab-pane active" id="defaultedthing">
-                        <select class="form-control" ng-options="option.name for option in select.cTs track by option.id" ng-model="cT"></select>
-                        <div class="panel-group" id="accordion" role="tablist"  aria-multiselectable="true">
-                            <div class="panel panel-default">
-                                <div  class="panel-heading" role="tab" id="polInfo">
-                                    <h4 class="panel-title">
-                                        <a role="button" target="_self" data-toggle="collapse" data-parent="#accordion" href="#colPolInfo" aria-expanded="true" aria-controls="colPolInfo">Policy</a>
-                                    </h4>
-                                </div>
-                                <div id="colPolInfo" class="panel-collapse collapse in" role="tabpanel"  aria-labelledby="polInfo ">
-                                    <div class="panel-body">
-                                        <div ng-repeat="info in data track by $index">
-                                            <div class="input-group">
-                                                <span class="input-group-addon glyphicon glyphicon-book"></span>
-                                                <input type="text" class="form-control" ng-model="info.pol.pN" placeholder="Policy">
-                                            </div>
-                                            <div class="input-group">
-                                                <span class="input-group-addon glyphicon glyphicon-user"></span>
-                                                <input type="text" class="form-control" ng-model="info.pol.pH.name" placeholder="Name">
-                                            </div>
-                                            <div class="input-group">
-                                                <span class="input-group-addon glyphicon glyphicon-calendar"></span>
-                                                <input type="text" class="form-control" ng-model="info.pol.doP" placeholder="Date of Purchase">
-                                            </div>
-                                            <div class="input-group">
-                                                <span class="input-group-addon glyphicon glyphicon-calendar"></span>
-                                                <input type="text" class="form-control" ng-model="info.pol.depD" placeholder="Departure Date">
-                                            </div>
-                                            <div class="input-group">
-                                                <span class="input-group-addon glyphicon glyphicon-calendar"></span>
-                                                <input type="text" class="form-control" ng-model="info.pol.retD" placeholder="Return Date">
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-primary" ng-click="addOne()">Add One</button>
-                                        <button class="btn btn-danger" ng-hide="data.length<=1" ng-click="removeOne()">Remove One</button>
+                <select class="form-control" ng-options="option.name for option in select.cTs track by option.id" ng-model="cT"></select>
+                <div class="panel-group" id="accordion" role="tablist"  aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div  class="panel-heading" role="tab" id="polInfo">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#colPolInfo" aria-expanded="true" aria-controls="colPolInfo">Policy</a>
+                            </h4>
+                        </div>
+                        <div id="colPolInfo" class="panel-collapse collapse in" role="tabpanel"  aria-labelledby="polInfo ">
+                            <div class="panel-body">
+                                <div ng-repeat="info in data track by $index">
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-book"></span>
+                                        <input type="text" class="form-control" ng-model="info.pol.pN" placeholder="Policy">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-user"></span>
+                                        <input type="text" class="form-control" ng-model="info.pol.pH.name" placeholder="Name">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                                        <input type="text" class="form-control" ng-model="info.pol.doP" placeholder="Date of Purchase">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                                        <input type="text" class="form-control" ng-model="info.pol.depD" placeholder="Departure Date">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                                        <input type="text" class="form-control" ng-model="info.pol.retD" placeholder="Return Date">
                                     </div>
                                 </div>
+                                <button class="btn btn-primary" ng-click="addOne()">Add One</button>
+                                <button class="btn btn-danger" ng-hide="data.length<=1" ng-click="removeOne()">Remove One</button>
                             </div>
-                            
-                            <div class="panel panel-default">
-                                <div  class="panel-heading" role="tab" id="contactInfo">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" target="_self" role="button" data-toggle="collapse" data-parent="#accordion" href="#colConInfo"  aria-expanded="false" aria-controls="colConInfo">Contact Information</a>
-                                    </h4>
-                                </div>
-                                <div id="colConInfo" class="panel-collapse collapse" role="tabpanel"  aria-labelledby="contactInfo">
-                                    <div class="panel-body">
-                                        <div ng-repeat="info in data track by $index">
-                                            <div class="input-group">
-                                                <span class="input-group-addon glyphicon glyphicon-home"></span>
-                                                <input type="text" class="form-control" ng-model="info.pol.pH.address" placeholder="Address">
-                                            </div>
-                                            <div class="input-group">
-                                                <span class="input-group-addon glyphicon glyphicon-earphone"></span>
-                                                <input type="text" class="form-control" ng-model="info.pol.pH.phone" placeholder="Phone">
-                                            </div>
-                                            <div class="input-group">
-                                                <span class="input-group-addon glyphicon glyphicon-envelope"></span>
-                                                <input type="text" class="form-control" ng-model="info.pol.pH.email" placeholder="Email">
-                                            </div>
-                                        </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div  class="panel-heading" role="tab" id="contactInfo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#colConInfo"  aria-expanded="false" aria-controls="colConInfo">Contact Information</a>
+                            </h4>
+                        </div>
+                        <div id="colConInfo" class="panel-collapse collapse" role="tabpanel"  aria-labelledby="contactInfo">
+                            <div class="panel-body">
+                                <div ng-repeat="info in data track by $index">
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-home"></span>
+                                        <input type="text" class="form-control" ng-model="info.pol.pH.address" placeholder="Address">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-earphone"></span>
+                                        <input type="text" class="form-control" ng-model="info.pol.pH.phone" placeholder="Phone">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-envelope"></span>
+                                        <input type="text" class="form-control" ng-model="info.pol.pH.email" placeholder="Email">
                                     </div>
                                 </div>
                             </div>
@@ -92,50 +81,6 @@
                 </div>
             </div>
         </div>
-    </div>-->
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-<div class="panel panel-default">
-<div class="panel-heading" role="tab" id="headingOne">
-  <h4 class="panel-title">
-    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-      Collapsible Group Item #1
-    </a>
-  </h4>
-</div>
-<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-  <div class="panel-body">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-  </div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading" role="tab" id="headingTwo">
-  <h4 class="panel-title">
-    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-      Collapsible Group Item #2
-    </a>
-  </h4>
-</div>
-<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-  <div class="panel-body">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-  </div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading" role="tab" id="headingThree">
-  <h4 class="panel-title">
-    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-      Collapsible Group Item #3
-    </a>
-  </h4>
-</div>
-<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-  <div class="panel-body">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-  </div>
-</div>
-</div>
-</div>
+    </div>
 </body>
 </html>
