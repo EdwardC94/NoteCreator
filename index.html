@@ -14,6 +14,14 @@
 <body>
     <div ng-controller="GralCtrl" class="container-fluid">
         <div class="row">
+             <div class="col-xs-4">
+                <img src="http://www.allianzworldwidepartners.ro/corporate/images/logo-4.png" class="img-responsive">
+             </div>
+             <div class="col-xs-8">
+                <h2>Note Creator</h2>
+             </div>
+        </div>
+        <div class="row">
             <div class="col-xs-12">
                 <select class="form-control" ng-options="option.name for option in select.cTs track by option.id" ng-model="cT"></select>
                 <div class="panel-group" id="accordion" role="tablist"  aria-multiselectable="true">
