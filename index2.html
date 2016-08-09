@@ -9,7 +9,7 @@
     </head>
     <body ng-app="NoteApplication">
         <div>
-            <select class="form-control" ng-options="option.name for option in data.callType track by option.id"
+            <select class="form-control" ng-options="option.name for option in cTs track by option.id" ng-model="data.cT"></select>
         </div>
     </body>
 </html>
