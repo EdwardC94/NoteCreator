@@ -14,7 +14,7 @@
             this.incD = incD;
             this.benInfo = benInfo;
         };
-        $scope.cTs = [{id: 0, name : "FNOL"}, {id : 1, name : "Cancellation"}, {id : 2, name : "General Inquiry"}]
+        $scope.cTs = [{id: 0, name : "FNOL"}, {id : 1, name : "Cancellation"}, {id : 2, name : "General Inquiry"}];
         $scope.data = {
             cT : $scope.cTs[0],
             pol : new Policy(),
