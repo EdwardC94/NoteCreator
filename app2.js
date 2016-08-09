@@ -1,7 +1,7 @@
 (function () {
     var app = angular.module("NoteApplication", []);
     
-    app.controller = angular.controller("GralCtrl" , ["$scope", function ($scope) {
+    app.controller("GralCtrl" , ["$scope", function ($scope) {
         function Policy(pN = "", phN = "", doP = "", depD = "", retD = "", insureds = [{name : "", email : "", phone : "", address : ""}]) {
             this.pN = pN;
             this.doP = dop;
