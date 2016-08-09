@@ -81,8 +81,8 @@
                         <div id="collapse_cancDet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="canc_cancDet">
                            <div class="panel-body">
                               <label ng-hide="true" for="canc_cancReason">Cancellation Reason:</label>
-                              <select class="form-control" name="canc_cancReason" id="canc_cancReason" ng-options="option.reason for option in availableOptions track by option.id" ng-model="selectedOption" ng-hide="selectedOption == 'Other'"></select>
-                              <div class="input-group" ng-show="selectedOption == 'Other'">
+                              <select class="form-control" name="canc_cancReason" id="canc_cancReason" ng-options="option.reason for option in availableOptions track by option.id" ng-model="selectedOption" ng-hide="selectedOption.reason == 'Other'"></select>
+                              <div class="input-group ng-hide" ng-show="selectedOption.reason == 'Other'">
                                  <span class="input-group-addon glyphicon glyphicon-usd" id="test"></span>
                                  <input type="text" class="form-control" aria-describedby="test" ng-model="data.test" placeholder="Test">
                               </div>
