@@ -86,6 +86,39 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="panel panel-default">
+                        <div  class="panel-heading" role="tab" id="fnolInfo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#colFnolInfo"  aria-expanded="false" aria-controls="colFnolInfo">Contact Information</a>
+                            </h4>
+                        </div>
+                        <div id="colFnolInfo" class="panel-collapse collapse" role="tabpanel"  aria-labelledby="fnolInfo">
+                            <div class="panel-body">
+                                <div ng-repeat="info in data track by $index">
+                                    <select class="form-control" ng-options="option.name for option in select.bens track by option.id" ng-model="data.fnol.benInfo.benefit.name"></select>
+                                    <select class="form-control" ng-options="option.name for option in select.reas track by option.id" ng-model="data.fnol.benInfo.reason.name"></select>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-book"></span>
+                                        <input type="text" class="form-control" ng-model="info.fnol.benInfo.claimN" placeholder="Claim">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                                        <input type="text" class="form-control" ng-model="info.fnol.filedD" placeholder="Filed date">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                                        <input type="text" class="form-control" ng-model="info.fnol.incD" placeholder="Incurred date">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-usd"></span>
+                                        <input type="text" class="form-control" ng-model="info.fnol.benInfo.amountClaimed" placeholder="Amount Claimed">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
