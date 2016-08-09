@@ -9,12 +9,15 @@
     </head>
     <body ng-app="NoteApplication">
         <div ng-controller="GralCtrl">
-            <select class="form-control" ng-options="option.name for option in cTs track by option.id" ng-model="data.cT"></select>
-            <div class="input-group">
-                <span class="input-group-addon glyphicon glyphicon-book"></span>
-                <input type="text" class="form-control" ng-model="data.pol.ph.name" placeholder="Name">
+            <select class="form-control" ng-options="option.name for option in select.cTs track by option.id" ng-model="cT"></select>
+            <div ng-repeat="info in data track by $index">
+                <div class="input-group">
+                    <span class="input-group-addon glyphicon glyphicon-book"></span>
+                    <input type="text" class="form-control" ng-model="info.pol.ph.name" placeholder="Name">
+                </div>
+                <h1>{{info.pol.ph.name}}</h1>
             </div>
-            <h1>{{data.pol.ph.name}}</h1>
+            
         </div>
     </body>
 </html>
