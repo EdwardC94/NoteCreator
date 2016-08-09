@@ -4,7 +4,7 @@
     app.controller("GralCtrl" , ["$scope", function ($scope) {
         function Policy(pN = "", phN = "", doP = "", depD = "", retD = "", insureds = [{name : "", email : "", phone : "", address : ""}]) {
             this.pN = pN;
-            this.doP = dop;
+            this.doP = doP;
             this.depD = depD;
             this.retD = retD;
             this.insureds = insureds;
