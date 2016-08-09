@@ -14,9 +14,10 @@
             this.incD = incD;
             this.benInfo = benInfo;
         };
+        $scope.cTs = [{id: 0, name : "FNOL"}, {id : 1, name : "Cancellation"}, {id : 2, name : "General Inquiry"}]
         $scope.data = {
-            callType : [{id: 0, name : "FNOL"}, {id : 1, name : "Cancellation"}, {id : 2, name : "General Inquiry"}],
-            policy : new Policy(),
+            cT : $scope.callTypes[0],
+            pol : new Policy(),
             fnol : new FNOL()
         };
     }])
