@@ -23,11 +23,7 @@
             $scope.data.push({pol : new Policy(), fnol : new FNOL()});
         };
         $scope.removeOne = function() {
-            if($scope.data.length > 1) {
-                $scope.data.pop();
-            }else{
-                alert("Debe haber al menos una Póliza para poder generar una Nota");
-            }
+            $scope.data.pop();
         };
     }])
 })();
