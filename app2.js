@@ -18,6 +18,9 @@
             cTs : [{id: 0, name : "FNOL"}, {id : 1, name : "Cancellation"}, {id : 2, name : "General Inquiry"}]
         };
         $scope.cT = $scope.select.cTs[0];
-        $scope.data = [{pol : new Policy(), fnol : new FNOL()}, {pol : new Policy(), fnol : new FNOL()}, {pol : new Policy(), fnol : new FNOL()}];
+        $scope.data = [{pol : new Policy(), fnol : new FNOL()}];
+        $scope.addOne = function() {
+            $scope.data.push({pol : new Policy(), fnol : new FNOL()});
+        };
     }])
 })();
