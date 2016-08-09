@@ -32,7 +32,7 @@
 	app.controller("CancellationCtrl", ["$scope", function($scope){
     	$scope.availableOptions = [
     	    {id: 0, reason: 'Cancellation Reason', exp: ''},
-    	    {id: 1', reason: 'Unintended Purchase', exp: 'the customer made the purchase of the Policy by mistake'},
+    	    {id: 1, reason: 'Unintended Purchase', exp: 'the customer made the purchase of the Policy by mistake'},
     	    {id: 2, reason: 'Satisfaction Guarantee', exp: 'the customer is not satisfied with the coverage on the Policy and wants to cancel it'},
     	    {id: 3, reason: 'Duplicate', exp: 'the customer is covered by other insurance Policy'},
     	    {id: 4, reason: 'Did not pick up rental', exp: 'the reservation of the car was cancelled'},
