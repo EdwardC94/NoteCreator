@@ -31,12 +31,13 @@
 	};
 	app.controller("CancellationCtrl", ["$scope", function($scope){
     	$scope.availableOptions = [
-    	    {id: '0', reason: 'Cancellation Reason', exp: ''},
-    	    {id: '1', reason: 'Unintended Purchase', exp: 'the customer made the purchase of the Policy by mistake'},
-    	    {id: '2', reason: 'Satisfaction Guarantee', exp: 'the customer is not satisfied with the coverage on the Policy and wants to cancel it'},
-    	    {id: '3', reason: 'Duplicate', exp: 'the customer is covered by other insurance Policy'},
-    	    {id: '4', reason: 'Did not pick up rental', exp: 'the reservation of the car was cancelled'},
-    	    {id: '5', reason: 'AGA not accepted by Car Rental Agency', exp: 'the customer had to purchase insurance from a different Company, because the Car Rental Agency would not accept AGAs'}
+    	    {id: 0, reason: 'Cancellation Reason', exp: ''},
+    	    {id: 1', reason: 'Unintended Purchase', exp: 'the customer made the purchase of the Policy by mistake'},
+    	    {id: 2, reason: 'Satisfaction Guarantee', exp: 'the customer is not satisfied with the coverage on the Policy and wants to cancel it'},
+    	    {id: 3, reason: 'Duplicate', exp: 'the customer is covered by other insurance Policy'},
+    	    {id: 4, reason: 'Did not pick up rental', exp: 'the reservation of the car was cancelled'},
+    	    {id: 5, reason: 'AGA not accepted by Car Rental Agency', exp: 'the customer had to purchase insurance from a different Company, because the Car Rental Agency would not accept AGAs'},
+    	    {id: 6, reason: "Other", exp: ""}
     	    ];
 	    $scope.selectedOption = $scope.availableOptions[0];
 	    $scope.data = new Policy();
@@ -52,11 +53,12 @@
 		$scope.benefits = [
 			{id: 0, name: "Select a benefit", exp : "" },
 			{id: 1, name: "Trip Cancellation", exp : "their trip was cancelled" },
-			{id: 2, name: "Trip Interruption", exp: "they have to come back earlier from their trip"},
+			{id: 2, name: "Trip Interruption", exp: "they had to return from their trip on a date different than it was scheduled"},
 			{id: 3, name: "Travel Delay", exp: "their trip was delayed"},
 			{id: 4, name: "Baggage Coverage", exp: "their baggage is lost/stolen/damaged"},
 			{id: 5, name: "Baggage Delay", exp: "their baggage was delayed"},
-			{id: 6, name: "Missed Connection", exp: "they missed their connecting flight"}
+			{id: 6, name: "Missed Connection", exp: "they missed their connecting flight"},
+			{id: 7, name: "Medical Expenses", exp: "they had to pay for medical expenses"}  
 			];
 	    $scope.reason = [
 			{id: 0, name: "Claim reason", exp : "" },
@@ -65,7 +67,8 @@
 			{id: 3, name: "Illness/Injury of FM", exp: "a serious illness/injury of a familiy member of an insured on this Policy"},
 			{id: 4, name: "Illness/Injury of TC", exp: "a serious illness/injury of a traveling companion of the insured on this Policy"},
 			{id: 5, name: "Bad weather", exp: "bad weather while en route"},
-			{id: 6, name: "Death of a family member", exp: "the death of a family member of one of the insureds on this Policy"}
+			{id: 6, name: "Death of a family member", exp: "the death of a family member of one of the insureds on this Policy"},
+			{id: 7, name: "Military obligations", exp: "their personal leave was revoked or they were reassigned while working in the U.S. Army"}
 			];
 	    $scope.selBen = {id: 0, name: "Select a reason", exp : "" };
 	    $scope.selReas = {id: 0, name: "Claim reason", exp : "" };
