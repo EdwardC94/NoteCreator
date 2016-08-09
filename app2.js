@@ -14,7 +14,7 @@
             this.incD = incD;
             this.benInfo = benInfo;
         };
-        $scope.select {
+        $scope.select = {
             cTs : [{id: 0, name : "FNOL"}, {id : 1, name : "Cancellation"}, {id : 2, name : "General Inquiry"}]
         };
         $scope.cT = $scope.select.cTs[0];
