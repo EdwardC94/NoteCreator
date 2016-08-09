@@ -15,7 +15,7 @@
             this.benInfo = benInfo;
         };
         $scope.data = {
-            callType = [{id: 0, name : "FNOL"}, {id : 1, name : "Cancellation"}, {id : 2, name : "General Inquiry"}],
+            callType : [{id: 0, name : "FNOL"}, {id : 1, name : "Cancellation"}, {id : 2, name : "General Inquiry"}],
             policy : new Policy(),
             fnol : new FNOL()
         };
