@@ -24,32 +24,58 @@
                             <div ng-repeat="info in data track by $index">
                                 <div class="input-group">
                                     <span class="input-group-addon glyphicon glyphicon-book"></span>
-                                    <input type="text" class="form-control" ng-model="info.pol.ph.name" placeholder="Name">
+                                    <input type="text" class="form-control" ng-model="info.pol.pN" placeholder="Policy">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon glyphicon glyphicon-user"></span>
+                                    <input type="text" class="form-control" ng-model="info.pol.pH.name" placeholder="Name">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                                    <input type="text" class="form-control" ng-model="info.pol.doP" placeholder="Date of Purchase">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                                    <input type="text" class="form-control" ng-model="info.pol.depD" placeholder="Departure Date">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                                    <input type="text" class="form-control" ng-model="info.pol.retD" placeholder="Return Date">
                                 </div>
                             </div>
+                            <!--The buttons to add more Policies to a note
                             <button class="btn btn-primary" ng-click="addOne()">Add One</button>
-                            <button class="btn btn-danger" ng-hide="data.length<=1" ng-click="removeOne()">Remove One</button>
+                            <button class="btn btn-danger" ng-hide="data.length<=1" ng-click="removeOne()">Remove One</button>-->
                         </div>
                     </div>
                 </div>
                 
                 <div class="panel panel-default">
-                    <div  class="panel-heading" role="tab" id="fnolInfo">
+                    <div  class="panel-heading" role="tab" id="contactInfo">
                         <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#canc_accordion" href="#collapse-fnolInfo">Policy</a>
+                            <a role="button" data-toggle="collapse" data-parent="#canc_accordion" href="#collapse-contactInfo">Contact Information</a>
                         </h4>
                     </div>
-                    <div id="collapse-fnolInfo" class="panel-collapse collapse" role="tabpanel">
+                    <div id="collapse-contactInfo" class="panel-collapse collapse" role="tabpanel">
                         <div class="panel-body">
-                            
+                            <div ng-repeat="info in data track by $index">
+                                <div class="input-group">
+                                    <span class="input-group-addon glyphicon glyphicon-home"></span>
+                                    <input type="text" class="form-control" ng-model="info.pol.pH.address" placeholder="Address">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon glyphicon glyphicon-earphone"></span>
+                                    <input type="text" class="form-control" ng-model="info.pol.pH.phone" placeholder="Phone">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon glyphicon glyphicon-envelope"></span>
+                                    <input type="text" class="form-control" ng-model="info.pol.pH.email" placeholder="Email">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
-            
-            
         </div>
     </body>
 </html>
