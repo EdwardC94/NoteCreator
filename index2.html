@@ -10,6 +10,11 @@
     <body ng-app="NoteApplication">
         <div ng-controller="GralCtrl">
             <select class="form-control" ng-options="option.name for option in cTs track by option.id" ng-model="data.cT"></select>
+            <div class="input-group">
+                <span class="input-group-addon glyphicon glyphicon-book"></span>
+                <input type="text" class="form-control" ng-model="data.pol.ph.name" placeholder="Name">
+            </div>
+            <h1>{{data.pol.ph.name}}</h1>
         </div>
     </body>
 </html>
