@@ -11,15 +11,15 @@
         <div ng-controller="GralCtrl">
             <select class="form-control" ng-options="option.name for option in select.cTs track by option.id" ng-model="cT"></select>
             
-            <div class="panel-group" id="gral_accordion" role="tablist">
+            <div class="panel-group" id="gral_accordion" role="tablist"  aria-multiselectable="true">
                 
                 <div class="panel panel-default">
                     <div  class="panel-heading" role="tab" id="polInfo">
                         <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#gral_accordion" href="#collapse-polInfo">Policy</a>
+                            <a role="button" data-toggle="collapse" data-parent="#gral_accordion" href="#collapse-polInfo"  aria-expanded="true" aria-controls="collapse-polInfo">Policy</a>
                         </h4>
                     </div>
-                    <div id="collapse-polInfo" class="panel-collapse collapse in" role="tabpanel">
+                    <div id="collapse-polInfo" class="panel-collapse collapse in" role="tabpanel"  aria-labelledby="polInfo ">
                         <div class="panel-body">
                             <div ng-repeat="info in data track by $index">
                                 <div class="input-group">
@@ -53,10 +53,10 @@
                 <div class="panel panel-default">
                     <div  class="panel-heading" role="tab" id="contactInfo">
                         <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#gral_accordion" href="#collapse-contactInfo">Contact Information</a>
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#gral_accordion" href="#collapse-contactInfo"  aria-expanded="false" aria-controls="collapse-contactInfo">Contact Information</a>
                         </h4>
                     </div>
-                    <div id="collapse-contactInfo" class="panel-collapse collapse" role="tabpanel">
+                    <div id="collapse-contactInfo" class="panel-collapse collapse" role="tabpanel"  aria-labelledby="contactInfo">
                         <div class="panel-body">
                             <div ng-repeat="info in data track by $index">
                                 <div class="input-group">
