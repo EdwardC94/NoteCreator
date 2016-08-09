@@ -2,7 +2,7 @@
     var app = angular.module("NoteApplication", []);
     
     app.controller("GralCtrl" , ["$scope", function ($scope) {
-        function Policy(pN = "", phN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}pH) {
+        function Policy(pN = "", phN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}) {
             this.pN = pN;
             this.doP = doP;
             this.depD = depD;
