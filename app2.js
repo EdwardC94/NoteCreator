@@ -27,7 +27,6 @@
                 {id: 7, name: "Military obligations", exp: "their personal leave was revoked or they were reassigned while working in the U.S. Army"}
                 ]
         };
-        $scope.test = $scope.select.reas[0];
         function Policy(pN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}) {
             this.pN = pN;
             this.doP = doP;
@@ -54,7 +53,7 @@
             var fnol = $scope.data[0].fnol;
             switch($scope.cT.name) {
                 case "FNOL" :
-                    note = "<p>".concat(pol.pH.name).concat(" called in to file a claim because ").concat(fnol.benInfo.benefit.exp).concat("</p>");
+                    note = "<p>".concat(pol.pH.name).concat(" called in to file a claim because ").concat(fnol.benInfo.benefit.exp).concat(" due to ").concat(fnol.benInfo.reason.exp).concat("</p>").concat("<p>I assisted the PH to file a claim, for which I confirmed that the next information on the Policy was correct:</p>").concat("<ul><li>Policy Number :").concat(pol.pN).concat("</li></ul>");
                     break;
             };
             return $sce.trustAsHtml(note);
