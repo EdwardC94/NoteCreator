@@ -34,7 +34,7 @@
             this.retD = retD;
             this.pH = pH;
         };
-        function FNOL(filedD = '', incD = '', benInfo = [{claimN : '', benefit : $scope.select.bens[0], reason : $scope.select.reas[0], amountClaimed : ''}]) {
+        function FNOL(filedD = '', incD = '', benInfo = {claimN : '', benefit : $scope.select.bens[0], reason : $scope.select.reas[0], amountClaimed : ''}) {
             this.filedD = filedD;
             this.incD = incD;
             this.benInfo = benInfo;
