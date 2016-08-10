@@ -1,1 +1,25 @@
-<p>Policy Number is: {{$parent.data[0].pol.pH.name}}</p>
+<p>{{$parent.data[0].pol.pH.name}} called in to file a claim because {{$parent.data[0].fnol.benInfo.benefit.exp}} due to {{$parent.data[0].fnol.benInfo.reason.exp}}.</p>
+<p>I assisted the PH to file a claim, for which I first confirmed that the next contact information on his Policy was accurate: </p>
+<ul>
+    <li>Policy: {{$parent.data[0].pol.pN}}</li>
+    <li>Name: {{$parent.data[0].pol.pH.name}}</li>
+    <li>Date of Purchase: {{$parent.data[0].pol.doP}}</li>
+    <li>Covered period: {{$parent.data[0].pol.depD}} - {{$parent.data[0].pol.retD}}</li>
+    <li>Address: {{$parent.data[0].pol.pH.address}}</li>
+    <li>Phone: {{$parent.data[0].pol.pH.phone}}</li>
+    <li>E-mail: {{$parent.data[0].pol.pH.email}}</li>
+</ul>
+<br />
+<p>Summary of Claim:</p>
+<ul>
+    <li>FNOL date: {{$parent.data[0].fnol.filedD}}</li>
+    <li>Incurred Date: {{$parent.data[0].fnol.incD}}</li>
+    <li>Amount claimed: {{$parent.data[0].fnol.amountClaimed}}</li>
+    <li ng-hide="$parent.data[0].fnol.addInfo == '' ">It is worth noting that: {{$parent.data[0].fnol.addInfo}}</li>
+</ul>
+<br />
+<p>The PH was advised of the methods and timeframes to send us the required documentation. FNOL filed and fulfillment sent.</p>
+
+<!--
+function Policy(pN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""})
+function FNOL(filedD = '', incD = '', benInfo = {claimN : '', benefit : $scope.select.bens[0], reason : $scope.select.reas[0], amountClaimed : ''})-->
