@@ -40,7 +40,7 @@
             this.doP = "";
             this.depD = "";
             this.retD = "";
-            this.pH = = {name : "", email : "", phone : "", address : ""};
+            this.pH = {name : "", email : "", phone : "", address : ""};
             this.payment = {amount : "", brand : "", l4d : ""};
             this.cancellation = $scope.select.canc[0];
             this.inquiry = {request : '', resolution : ''};
