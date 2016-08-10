@@ -27,6 +27,7 @@
                 {id: 7, name: "Military obligations", exp: "their personal leave was revoked or they were reassigned while working in the U.S. Army"}
                 ]
         };
+        $scope.test = $scope.select.reas[0];
         function Policy(pN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}) {
             this.pN = pN;
             this.doP = doP;
