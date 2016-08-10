@@ -35,7 +35,7 @@
         	    {id: 6, reason: "Other", exp: ""}
         	    ]
         };
-        function Policy(pN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}, payment = {amount : "", brand : "", l4d : ""}, cancellation = $scope.select.canc[0]) {
+        function Policy(pN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}, payment = {amount : "", brand : "", l4d : ""}, cancellation = $scope.select.canc[0], inquiry = {request : '', resolution : ''}) {
             this.pN = pN;
             this.doP = doP;
             this.depD = depD;
@@ -43,6 +43,7 @@
             this.pH = pH;
             this.payment = payment;
             this.cancellation = cancellation;
+            this.inquiry = inquiry;
         };
         function FNOL(filedD = '', incD = '', benInfo = {claimN : '', benefit : $scope.select.bens[0], reason : $scope.select.reas[0], amountClaimed : ''}, addInfo = '') {
             this.filedD = filedD;
