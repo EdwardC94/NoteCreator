@@ -1,5 +1,5 @@
 (function () {
-    var app = angular.module("NoteApplication", []);
+    var app = angular.module("NoteApplication", ['ngSanitize']);
     
     app.controller("GralCtrl" , ["$scope", function ($scope) {
         $scope.select = {
