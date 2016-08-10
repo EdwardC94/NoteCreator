@@ -44,6 +44,7 @@ span.glyphicon-copy:hover {
 select.btn-success {
 	margin-top : 0.5em;
 	margin-bottom : 1em;
+	font-size : 18px;
 }
 #note-title>h3 {
 	display : inline;
