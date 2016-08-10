@@ -89,6 +89,28 @@
                         </div>
                     </div>
                     
+                    <div ng-hide="cT.name != 'General Inquiry'" class="panel panel-default">
+                        <div  class="panel-heading" role="tab" id="inquiryInfo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#colInqInfo"  aria-expanded="false" aria-controls="colInqInfo">Inquiry</a>
+                            </h4>
+                        </div>
+                        <div id="colInqInfo" class="panel-collapse collapse" role="tabpanel"  aria-labelledby="inquiryInfo">
+                            <div class="panel-body">
+                                <div ng-repeat="info in data track by $index">
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-question-sign"></span>
+                                        <input type="text" class="form-control" ng-model="info.pol.inquiry.request" placeholder="Request">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-"></span>
+                                        <input type="text" class="form-control" ng-model="info.pol.inquiry.resolution" placeholder="Resolution">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div ng-hide="cT.name != 'Cancellation'" class="panel panel-default">
                         <div class="panel-heading" role="tab" id="cancDet">
                             <h4 class="panel-title">
