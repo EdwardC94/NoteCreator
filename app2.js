@@ -1,7 +1,7 @@
 (function () {
     var app = angular.module("NoteApplication", ['ngSanitize']);
     
-    app.controller("GralCtrl" , ["$scope", "$sce" function ($scope, $sce) {
+    app.controller("GralCtrl" , ["$scope", "$sce", function ($scope, $sce) {
         $scope.select = {
             cTs : [
                 {id: 0, name : "FNOL"},
