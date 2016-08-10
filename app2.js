@@ -48,7 +48,7 @@
             $scope.data.pop();
         };
         $scope.toString = function() {
-            return "Name on Policy is: " + $scope.data.pol.pH.name;
+            return "Name on Policy is: " + $scope.data[0].pol.pH.name;
         };
     }])
 })();
