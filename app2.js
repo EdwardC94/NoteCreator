@@ -1,7 +1,7 @@
 (function () {
     var app = angular.module("NoteApplication", ['ngSanitize']);
     
-    app.controller("GralCtrl" , ["$scope", function ($scope) {
+    app.controller("GralCtrl" , ["$scope", "$sce" function ($scope, $sce) {
         $scope.select = {
             cTs : [
                 {id: 0, name : "FNOL"},
@@ -57,7 +57,7 @@
                     note = "<p>".concat(pol.pH.name).concat(" called in to file a claim because ").concat(fnol.benInfo.benefit.exp).concat("</p>");
                     break;
             };
-            return note;
+            return $sce.trustAsHtml(note);
         };
     }])
 })();
