@@ -24,15 +24,25 @@
                 {id: 4, name: "Illness/Injury of TC", exp: "a serious illness/injury of a traveling companion of the insured on this Policy"},
                 {id: 5, name: "Bad weather", exp: "bad weather while en route"},
                 {id: 6, name: "Death of a family member", exp: "the death of a family member of one of the insureds on this Policy"},
-                {id: 7, name: "Military obligations", exp: "their personal leave was revoked or they were reassigned while working in the U.S. Army"}
-                ]
+                {id: 7, name: "Military obligations", exp: "their personal leave was revoked or they were reassigned while working in the U.S. Army"}],
+            canc : [
+        	    {id: 0, reason: 'Cancellation Reason', exp: ''},
+        	    {id: 1, reason: 'Unintended Purchase', exp: 'the customer made the purchase of the Policy by mistake'},
+        	    {id: 2, reason: 'Satisfaction Guarantee', exp: 'the customer is not satisfied with the coverage on the Policy and wants to cancel it'},
+        	    {id: 3, reason: 'Duplicate', exp: 'the customer is covered by other insurance Policy'},
+        	    {id: 4, reason: 'Did not pick up rental', exp: 'the reservation of the car was cancelled'},
+        	    {id: 5, reason: 'AGA not accepted by Car Rental Agency', exp: 'the customer had to purchase insurance from a different Company, because the Car Rental Agency would not accept AGAs'},
+        	    {id: 6, reason: "Other", exp: ""}
+        	    ];
         };
-        function Policy(pN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}) {
+        function Policy(pN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}, payment = {amount : "", brand : "", l4d : ""}, cancellation = $scope.select.canc[0]) {
             this.pN = pN;
             this.doP = doP;
             this.depD = depD;
             this.retD = retD;
             this.pH = pH;
+            this.payment = payment;
+            this.cancellation = cancellation;
         };
         function FNOL(filedD = '', incD = '', benInfo = {claimN : '', benefit : $scope.select.bens[0], reason : $scope.select.reas[0], amountClaimed : ''}, addInfo = '') {
             this.filedD = filedD;
