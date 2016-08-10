@@ -4,7 +4,7 @@
     app.controller("GralCtrl" , ["$scope", "$sce", function ($scope, $sce) {
         $scope.select = {
             cTs : [
-                {id: 0, name : "FNOL", url : 'templates/fnol.hmtl'},
+                {id: 0, name : "FNOL", url : 'templates/fnol.html'},
                 {id : 1, name : "Cancellation", url : 'templates/cancellation.html'},
                 {id : 2, name : "General Inquiry", url : 'templates/gralInq.html'}],
             bens : [
