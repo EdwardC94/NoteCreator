@@ -33,7 +33,7 @@
         	    {id: 4, reason: 'Did not pick up rental', exp: 'the reservation of the car was cancelled'},
         	    {id: 5, reason: 'AGA not accepted by Car Rental Agency', exp: 'the customer had to purchase insurance from a different Company, because the Car Rental Agency would not accept AGAs'},
         	    {id: 6, reason: "Other", exp: ""}
-        	    ];
+        	    ]
         };
         function Policy(pN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}, payment = {amount : "", brand : "", l4d : ""}, cancellation = $scope.select.canc[0]) {
             this.pN = pN;
