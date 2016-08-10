@@ -57,7 +57,19 @@
         };
         $scope.removeOne = function() {
             $scope.data.pop();
-        };/*
+        };
+        $scope.copy = function () {
+    		var urlField = document.querySelector('#note-content');
+    		var range = document.createRange();  
+    		range.selectNode(urlField);
+    		window.getSelection().addRange(range);
+    		document.execCommand('copy');				
+    		window.getSelection().removeAllRanges();
+        };
+        $scope.clear = function() {
+            $scope.data.pop();
+            $scope.data.push({pol : new Policy(), fnol : new FNOL()})
+        } /*
         $scope.toString = function() {
             let note = "";
             var pol = $scope.data[0].pol;
