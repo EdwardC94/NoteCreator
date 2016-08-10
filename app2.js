@@ -49,7 +49,15 @@
             $scope.data.pop();
         };
         $scope.toString = function() {
-            return "Name on Policy is: " + $scope.data[0].pol.pH.name;
+            let note = "";
+            var pol = $scope.data[0].pol;
+            var fnol = $scope.data[0].fnol;
+            switch($scope.cT.name) {
+                case "FNOL" :
+                    note = pol.pH.name.concat(" called in to file a claim because ").concat(fnol.benInfo.benefit.exp);
+                    break;
+            };
+            return note;
         };
     }])
 })();
