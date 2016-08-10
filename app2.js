@@ -4,9 +4,9 @@
     app.controller("GralCtrl" , ["$scope", "$sce", function ($scope, $sce) {
         $scope.select = {
             cTs : [
-                {id: 0, name : "FNOL"},
-                {id : 1, name : "Cancellation"},
-                {id : 2, name : "General Inquiry"}],
+                {id: 0, name : "FNOL", url : 'templates/fnol.hmtl'},
+                {id : 1, name : "Cancellation", url : 'templates/cancellation.html'},
+                {id : 2, name : "General Inquiry", url : 'templates/gralInq.html'}],
             bens : [
                 {id : 0, name: 'Benefit', exp : ''},
                 {id : 1, name: 'Trip Cancellation', exp : 'the trip covered by this Policy was cancelled'},
