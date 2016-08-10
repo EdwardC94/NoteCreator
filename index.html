@@ -97,6 +97,7 @@
                             <div class="panel-body">
                                 <div ng-repeat="info in data track by $index">
                                     <select class="form-control" ng-options="option.name for option in select.bens track by option.id" ng-model="info.fnol.benInfo.benefit.name"></select>
+                                    <select class="form-control" ng-options="option.name for option in select.bens track by option.id" ng-model="test"></select>
                                     <select class="form-control" ng-options="option.name for option in select.reas track by option.id" ng-model="info.fnol.benInfo.reason.name"></select>
                                     <p>{{info.fnol.benInfo.reason.name}}</p>
                                     <div class="input-group">
