@@ -34,10 +34,11 @@
             this.retD = retD;
             this.pH = pH;
         };
-        function FNOL(filedD = '', incD = '', benInfo = {claimN : '', benefit : $scope.select.bens[0], reason : $scope.select.reas[0], amountClaimed : ''}) {
+        function FNOL(filedD = '', incD = '', benInfo = {claimN : '', benefit : $scope.select.bens[0], reason : $scope.select.reas[0], amountClaimed : ''}, addInfo = '') {
             this.filedD = filedD;
             this.incD = incD;
             this.benInfo = benInfo;
+            this.addInfo = addInfo;
         };
         $scope.cT = $scope.select.cTs[0];
         $scope.data = [{pol : new Policy(), fnol : new FNOL()}];
@@ -46,7 +47,7 @@
         };
         $scope.removeOne = function() {
             $scope.data.pop();
-        };
+        };/*
         $scope.toString = function() {
             let note = "";
             var pol = $scope.data[0].pol;
@@ -57,6 +58,6 @@
                     break;
             };
             return $sce.trustAsHtml(note);
-        };
+        };*/
     }])
 })();
