@@ -1,3 +1,12 @@
+<p>{{$parent.data[0].pol.pH.name}} called in to cancel Policy {{$parent.data[0].pol.pN}} as {{$parent.data[0].pol.cancellation.exp}}. The Policy had been purchased on {{$parent.data[0].pol.doP}}, and the coverage was from {{$parent.data[0].pol.depD}} to {{$parent.data[0].pol.retD}}.</p>
+<br />
+<p>Cancellation details</p>
+<ul>
+  <li>Refund amount: {{$parent.data[0].pol.payment.amount}}</li>
+  <li>Brand of the card: {{$parent.data[0].pol.payment.brand}}</li>
+  <li>Last four digits: {{$parent.data[0].pol.l4d}}</li>
+</ul>
+<br />
+<p>Policy cancelled and fulfillment sent to: {{$parent.data[0].pol.pH.email}}</p>
 
-
-<!--function Policy(pN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""})-->
+<!--function Policy(pN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}, payment = {amount : "", brand : "", l4d : ""}, cancellation = $scope.select.canc[0])-->
