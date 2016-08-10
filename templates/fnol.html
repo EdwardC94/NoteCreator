@@ -14,7 +14,7 @@
 <ul>
     <li>FNOL date: {{$parent.data[0].fnol.filedD}}</li>
     <li>Incurred Date: {{$parent.data[0].fnol.incD}}</li>
-    <li>Amount claimed: {{$parent.data[0].fnol.amountClaimed}}</li>
+    <li>Amount claimed: {{$parent.data[0].fnol.benInfo.amountClaimed}}</li>
     <li ng-hide="$parent.data[0].fnol.addInfo == '' ">It is worth noting that: {{$parent.data[0].fnol.addInfo}}</li>
 </ul>
 <br />
