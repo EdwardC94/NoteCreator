@@ -26,6 +26,7 @@
             <div class="col-xs-12">
                 <select class="form-control btn btn-success" ng-options="option.name for option in select.cTs track by option.id" ng-model="cT"></select>
                 <div class="panel-group" id="accordion" role="tablist"  aria-multiselectable="true">
+                    
                     <div class="panel panel-default">
                         <div  class="panel-heading" role="tab" id="polInfo">
                             <h4 class="panel-title">
@@ -62,7 +63,7 @@
                         </div>
                     </div>
                     
-                    <div class="panel panel-default">
+                    <div ng-hide="cT.name != 'FNOL'" class="panel panel-default">
                         <div  class="panel-heading" role="tab" id="contactInfo">
                             <h4 class="panel-title">
                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#colConInfo"  aria-expanded="false" aria-controls="colConInfo">Contact Information</a>
@@ -88,8 +89,35 @@
                         </div>
                     </div>
                     
-                    <div class="panel panel-default">
-                        <div  class="panel-heading" role="tab" id="fnolInfo">
+                    <div ng-hide="cT.name != 'Cancellation'" class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="cancDet">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-togle="collapse" data-parent="#accordion" href="#colCancDet" aria-expanded="false" aria-controls="colCancDet">Cancellation details</a>
+                            </h4>
+                        </div>
+                        <div id="colCancDet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="cancDet">
+                            <div class="panel-body">
+                                <div ng-repeat="info in data track by $index">
+                                    <select class="form-control" ng-options="option.name for option in select.canc track by option.id" ng-model="info.pol.cancellation"></select>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-usd"></span>
+                                        <input type="text" class="form-control" ng-model="info.pol.payment.amount" placeholder="Amount refunded">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-credit-card"></span>
+                                        <input type="text" class="form-control" ng-model="info.pol.payment.brand" placeholder="Brand">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-triangle-right"></span>
+                                        <input type="text" class="form-control" ng-model="info.pol.payment.l4d" placeholder="Claim">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div ng-hide="cT.name != 'FNOL'" class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="fnolInfo">
                             <h4 class="panel-title">
                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#colFnolInfo"  aria-expanded="false" aria-controls="colFnolInfo">FNOL Information</a>
                             </h4>
@@ -123,6 +151,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
