@@ -1,9 +1,9 @@
 body {
-	background-color: white;
-	max-width: 400px;
+    background-color: white;
+    max-width: 400px;
 }
 div.row:first-child {
-	background-color: #013781;
+background-color: #013781;
 }
 div.row:first-child>div.col-xs-4 {
 	padding-top: 21px;
@@ -32,12 +32,10 @@ span.input-group-addon {
 }
 span.glyphicon-remove:hover {
 	color: red;
-	padding: 0.25em;
 	background-color: white;
 }
 span.glyphicon-copy:hover {
 	color: green;
-	padding: 0.25em;
 	background-color: white;
 }
 #note-content li {
