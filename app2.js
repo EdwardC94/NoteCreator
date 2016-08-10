@@ -28,7 +28,7 @@
                 {id : 5, name: 'Baggage Delay', exp : 'there was a dalay on the arrival of the baggage covered by this Policy'},
                 {id : 6, name: 'CDW', exp : 'the rental car covered by this Policy suffered damage'},
                 {id : 7, name: 'Medical Expenses', exp : 'there was a medical emergency during the trip covered by this Policy'}],
-            reas = [
+            reas : [
     			{id: 0, name: "Claim reason", exp : "" },
     			{id: 1, name: "Common Carrier delay", exp : "a delay by the common carrier" },
     			{id: 2, name: "Illness/Injury of Insured", exp: "a serious illness/injury of an insured on this Policy"},
