@@ -2,18 +2,6 @@
     var app = angular.module("NoteApplication", []);
     
     app.controller("GralCtrl" , ["$scope", function ($scope) {
-        function Policy(pN = "", phN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}) {
-            this.pN = pN;
-            this.doP = doP;
-            this.depD = depD;
-            this.retD = retD;
-            this.pH = pH;
-        };
-        function FNOL(filedD = '', incD = '', benInfo = [{claimN : '', benefit : $scope.select.bens[0], reason : $scope.select.reas[0], amountClaimed : ''}]) {
-            this.filedD = filedD;
-            this.incD = incD;
-            this.benInfo = benInfo;
-        };
         $scope.select = {
             cTs : [
                 {id: 0, name : "FNOL"},
@@ -38,6 +26,18 @@
     			{id: 6, name: "Death of a family member", exp: "the death of a family member of one of the insureds on this Policy"},
     			{id: 7, name: "Military obligations", exp: "their personal leave was revoked or they were reassigned while working in the U.S. Army"}
     			]
+        };
+        function Policy(pN = "", phN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}) {
+            this.pN = pN;
+            this.doP = doP;
+            this.depD = depD;
+            this.retD = retD;
+            this.pH = pH;
+        };
+        function FNOL(filedD = '', incD = '', benInfo = [{claimN : '', benefit : $scope.select.bens[0], reason : $scope.select.reas[0], amountClaimed : ''}]) {
+            this.filedD = filedD;
+            this.incD = incD;
+            this.benInfo = benInfo;
         };
         $scope.cT = $scope.select.cTs[0];
         $scope.data = [{pol : new Policy(), fnol : new FNOL()}];
