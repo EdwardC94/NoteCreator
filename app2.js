@@ -35,21 +35,21 @@
         	    {id: 6, reason: "Other", exp: ""}
         	    ]
         };
-        function Policy(pN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}, payment = {amount : "", brand : "", l4d : ""}, cancellation = $scope.select.canc[0], inquiry = {request : '', resolution : ''}) {
-            this.pN = pN;
-            this.doP = doP;
-            this.depD = depD;
-            this.retD = retD;
-            this.pH = pH;
-            this.payment = payment;
-            this.cancellation = cancellation;
-            this.inquiry = inquiry;
+        function Policy(pN, doP, depD, retD, pH, payment, cancellation, inquiry) {
+            this.pN = "";
+            this.doP = "";
+            this.depD = "";
+            this.retD = "";
+            this.pH = = {name : "", email : "", phone : "", address : ""};
+            this.payment = {amount : "", brand : "", l4d : ""};
+            this.cancellation = $scope.select.canc[0];
+            this.inquiry = {request : '', resolution : ''};
         };
-        function FNOL(filedD = '', incD = '', benInfo = {claimN : '', benefit : $scope.select.bens[0], reason : $scope.select.reas[0], amountClaimed : ''}, addInfo = '') {
-            this.filedD = filedD;
-            this.incD = incD;
-            this.benInfo = benInfo;
-            this.addInfo = addInfo;
+        function FNOL(filedD, incD, benInfo, addInfo) {
+            this.filedD = '';
+            this.incD = '';
+            this.benInfo = {claimN : '', benefit : $scope.select.bens[0], reason : $scope.select.reas[0], amountClaimed : ''};
+            this.addInfo = '';
         };
         $scope.cT = $scope.select.cTs[0];
         $scope.data = [{pol : new Policy(), fnol : new FNOL()}];
