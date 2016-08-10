@@ -96,9 +96,8 @@
                         <div id="colFnolInfo" class="panel-collapse collapse" role="tabpanel"  aria-labelledby="fnolInfo">
                             <div class="panel-body">
                                 <div ng-repeat="info in data track by $index">
-                                    <select class="form-control" ng-options="option.name for option in select.bens track by option.id" ng-model="data[$index].fnol.benInfo.benefit.name"></select>
-                                    <p>{{data[$index].fnol.benInfo.benefit.name}}</p>
-                                    <select class="form-control" ng-options="option.name for option in select.reas track by option.id" ng-model="data[$index].fnol.benInfo.reason.name"></select>
+                                    <select class="form-control" ng-options="option.name for option in select.bens track by option.id" ng-model="info.fnol.benInfo.benefit.name"></select>
+                                    <select class="form-control" ng-options="option.name for option in select.reas track by option.id" ng-model="info.fnol.benInfo.reason.name"></select>
                                     <div class="input-group">
                                         <span class="input-group-addon glyphicon glyphicon-book"></span>
                                         <input type="text" class="form-control" ng-model="info.fnol.benInfo.claimN" placeholder="Claim">
@@ -116,7 +115,6 @@
                                         <input type="text" class="form-control" ng-model="info.fnol.benInfo.amountClaimed" placeholder="Amount Claimed">
                                     </div>
                                 </div>
-                                <p>{{toString()}}</p>
                             </div>
                         </div>
                     </div>
