@@ -157,19 +157,13 @@
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Note</h3> 
+                    <div id="note-title" class="panel-heading">
+                        <h3 class="panel-title">Note</h3>
+                        <a id="copy-button" href="#" ng-click="copy()"><span class="img-circle glyphicon glyphicon-copy"></span></a>
+                        <a id="remove-button" href="#" ng-click="clear()"><span class="img-circle glyphicon glyphicon-remove"></span></a> 
                     </div>
-                    <div id="the-note" class="panel-body" ng-include="cT.url"></div>
+                    <div id="note-content" class="panel-body" ng-include="cT.url"></div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6">
-                <a class="nav-right" href="#" ng-click="copy()"><span class="img-circle glyphicon glyphicon-copy"></span></a>
-            </div>
-            <div class="col-xs-6">
-                <a class="nav-right" href="#" ng-click="clear()"><span class="img-circle glyphicon glyphicon-remove"></span></a>
             </div>
         </div>
     </div>
