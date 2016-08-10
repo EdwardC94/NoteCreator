@@ -54,7 +54,7 @@
             var fnol = $scope.data[0].fnol;
             switch($scope.cT.name) {
                 case "FNOL" :
-                    note = "<p>"pol.pH.name.concat(" called in to file a claim because ").concat(fnol.benInfo.benefit.exp).concat("</p>");
+                    note = "<p>".concat(pol.pH.name).concat(" called in to file a claim because ").concat(fnol.benInfo.benefit.exp).concat("</p>");
                     break;
             };
             return note;
