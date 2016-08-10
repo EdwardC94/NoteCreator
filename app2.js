@@ -17,15 +17,15 @@
                 {id : 6, name: 'CDW', exp : 'the rental car covered by this Policy suffered damage'},
                 {id : 7, name: 'Medical Expenses', exp : 'there was a medical emergency during the trip covered by this Policy'}],
             reas : [
-    			{id: 0, name: "Claim reason", exp : "" },
-    			{id: 1, name: "Common Carrier delay", exp : "a delay by the common carrier" },
-    			{id: 2, name: "Illness/Injury of Insured", exp: "a serious illness/injury of an insured on this Policy"},
-    			{id: 3, name: "Illness/Injury of FM", exp: "a serious illness/injury of a familiy member of an insured on this Policy"},
-    			{id: 4, name: "Illness/Injury of TC", exp: "a serious illness/injury of a traveling companion of the insured on this Policy"},
-    			{id: 5, name: "Bad weather", exp: "bad weather while en route"},
-    			{id: 6, name: "Death of a family member", exp: "the death of a family member of one of the insureds on this Policy"},
-    			{id: 7, name: "Military obligations", exp: "their personal leave was revoked or they were reassigned while working in the U.S. Army"}
-    			]
+                {id: 0, name: "Claim reason", exp : "" },
+                {id: 1, name: "Common Carrier delay", exp : "a delay by the common carrier" },
+                {id: 2, name: "Illness/Injury of Insured", exp: "a serious illness/injury of an insured on this Policy"},
+                {id: 3, name: "Illness/Injury of FM", exp: "a serious illness/injury of a familiy member of an insured on this Policy"},
+                {id: 4, name: "Illness/Injury of TC", exp: "a serious illness/injury of a traveling companion of the insured on this Policy"},
+                {id: 5, name: "Bad weather", exp: "bad weather while en route"},
+                {id: 6, name: "Death of a family member", exp: "the death of a family member of one of the insureds on this Policy"},
+                {id: 7, name: "Military obligations", exp: "their personal leave was revoked or they were reassigned while working in the U.S. Army"}
+                ]
         };
         function Policy(pN = "", phN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}) {
             this.pN = pN;
