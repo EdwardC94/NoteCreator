@@ -115,6 +115,10 @@
                                         <span class="input-group-addon glyphicon glyphicon-usd"></span>
                                         <input type="text" class="form-control" ng-model="info.fnol.benInfo.amountClaimed" placeholder="Amount Claimed">
                                     </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-plus"></span>
+                                        <input type="text" class="form-control" ng-model="info.fnol.benInfo.addInfo" placeholder="Additional Information">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -127,7 +131,7 @@
                         <a class="nav-right" href="#" ng-click="clear()"><span class="img-circle glyphicon glyphicon-remove"></span></a> 
                     </div>
                     <!--<div id="canc-note" class="panel-body" ng-bind-html="toString()"></div>-->
-                    <div id="canc-note" class="panel-body" ng-include="'templates/fnol.html'"
+                    <div id="canc-note" class="panel-body" ng-include="data.cT.url"
                 </div>
             </div>
         </div>
