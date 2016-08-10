@@ -9,7 +9,7 @@
             this.retD = retD;
             this.pH = pH;
         };
-        function FNOL(filedD = '', incD = '', benInfo = [{claimN : '', benefit : {id : 0, name: 'Benefit', exp : ''}, reason : {id : 0, name : 'Claim reason', exp : ''}, amountClaimed : ''}]) {
+        function FNOL(filedD = '', incD = '', benInfo = [{claimN : '', benefit : $scope.select.bens[0], reason : $scope.select.reas[0], amountClaimed : ''}]) {
             this.filedD = filedD;
             this.incD = incD;
             this.benInfo = benInfo;
