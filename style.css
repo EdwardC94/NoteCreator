@@ -40,10 +40,19 @@ span.glyphicon-copy:hover {
 	padding: 0.25em;
 	background-color: white;
 }
-#the-note li {
+#note-content li {
 	list-style: none;
 }
 select.btn-success {
 	margin-top : 0.5em;
 	margin-bottom : 1em;
+}
+#note-title>h3 {
+	display : inline;
+}
+#copy-button, #remove-button {
+	font-size : 16px;
+}
+#copy-button {
+	margin-left : 263px;
 }
