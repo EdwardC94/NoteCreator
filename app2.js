@@ -12,10 +12,11 @@
                 {id : 1, name: 'Trip Cancellation', exp : 'the trip covered by this Policy was cancelled'},
                 {id : 2, name: 'Trip Interruption', exp : 'the trip covered by this Policy was interrupted'},
                 {id : 3, name: 'Travel Delay', exp : 'the trip covered by this Policy was delayed'},
-                {id : 4, name: 'Baggage Coverage', exp : 'the baggage insured through this Policy was lost/stolen/damaged during the trip'},
+                {id : 4, name: 'Change Fee Coverage', exp : 'the insureds on this Policy need to travel on a different date'},
                 {id : 5, name: 'Baggage Delay', exp : 'there was a dalay on the arrival of the baggage covered by this Policy'},
                 {id : 6, name: 'CDW', exp : 'the rental car covered by this Policy suffered damage'},
-                {id : 7, name: 'Medical Expenses', exp : 'there was a medical emergency during the trip covered by this Policy'}],
+                {id : 7, name: 'Medical Expenses', exp : 'there was a medical emergency during the trip covered by this Policy'},
+                {id : 8, name: 'Baggage Coverage', exp : 'the baggage insured through this Policy was lost/stolen/damaged during the trip'}],
             reas : [
                 {id: 0, name: "Claim reason", exp : "" },
                 {id: 1, name: "Common Carrier delay", exp : "a delay by the common carrier" },
@@ -24,7 +25,8 @@
                 {id: 4, name: "Illness/Injury of TC", exp: "a serious illness/injury of a traveling companion of the insured on this Policy"},
                 {id: 5, name: "Bad weather", exp: "bad weather while en route"},
                 {id: 6, name: "Death of a family member", exp: "the death of a family member of one of the insureds on this Policy"},
-                {id: 7, name: "Military obligations", exp: "their personal leave was revoked or they were reassigned while working in the U.S. Army"}],
+                {id: 7, name: "Military obligations", exp: "having their personal leave revoked or due to being reassigned while working in the U.S. Army"},
+                {id: 8, name: "Termination or layoff", exp: "having being terminated or laid off from their job through no fault of their own, and from a job in which they were employed for at least the minimum amount of years established on the COI"}],
             canc : [
         	    {id: 0, reason: 'Cancellation Reason', exp: ''},
         	    {id: 1, reason: 'Unintended Purchase', exp: 'the customer made the purchase of the Policy by mistake'},
