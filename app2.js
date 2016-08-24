@@ -5,6 +5,9 @@
         $scope.break1 = new Date(Date.now());
         $scope.break2 = new Date(Date.now());
         $scope.lunch = new Date(Date.now());
+        $scope.theTime = function() {
+            return new Date(Date.now)
+        }
         
         $scope.select = {
             cTs : [
