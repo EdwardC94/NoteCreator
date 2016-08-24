@@ -25,26 +25,6 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <div class="input-group">
-                            <span class="input-group-addon glyphicon glyphicon-time"></span>
-                            <input type="time" class="form-control" ng-model="break1" placeholder="1st Break">
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="input-group">
-                            <span class="input-group-addon glyphicon glyphicon-time"></span>
-                            <input type="time" class="form-control" ng-model="lunch" placeholder="Lunch">
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="input-group">
-                            <span class="input-group-addon glyphicon glyphicon-time"></span>
-                            <input type="time" class="form-control" ng-model="break2" placeholder="2nd Break">
-                        </div>
-                    </div>
-                </div>
                 <select class="form-control btn btn-success" ng-options="option.name for option in select.cTs track by option.id" ng-model="cT"></select>
                 <div class="panel-group" id="accordion" role="tablist"  aria-multiselectable="true">
                     
@@ -208,6 +188,26 @@
                         <a id="remove-button" href="#" ng-click="clear()"><span class="img-circle glyphicon glyphicon-remove"></span></a> 
                     </div>
                     <div id="note-content" class="panel-body" ng-include="cT.url"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <span class="input-group-addon glyphicon glyphicon-time"></span>
+                    <input type="time" class="form-control" ng-model="break1" placeholder="1st Break">
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <span class="input-group-addon glyphicon glyphicon-time"></span>
+                    <input type="time" class="form-control" ng-model="lunch" placeholder="Lunch">
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <span class="input-group-addon glyphicon glyphicon-time"></span>
+                    <input type="time" class="form-control" ng-model="break2" placeholder="2nd Break">
                 </div>
             </div>
         </div>
