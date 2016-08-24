@@ -2,6 +2,10 @@
     var app = angular.module("NoteApplication", ['ngSanitize']);
     
     app.controller("GralCtrl" , ["$scope", "$sce", function ($scope, $sce) {
+        $scope.break1 = new Date(Date.now());
+        $scope.break2 = new Date(Date.now());
+        $scope.lunch = new Date(Date.now());
+        
         $scope.select = {
             cTs : [
                 {id: 0, name : "FNOL", url : 'templates/fnol.html'},
