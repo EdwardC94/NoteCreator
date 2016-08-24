@@ -194,16 +194,16 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="input-group">
-                    <span class="input-group-addon glyphicon glyphicon-time"></span>
-                    <input type="time" class="form-control" ng-model="break1" placeholder="1st Break">
+                    <span ng-class="{btn-danger : == function(){return Date.getTime()}}" class="input-group-addon">First Break</span>
+                    <input type="time" class="form-control" ng-model="break1" placeholder="HH:mm:ss">
                 </div>
                 <div class="input-group">
-                    <span class="input-group-addon glyphicon glyphicon-time"></span>
-                    <input type="time" class="form-control" ng-model="lunch" placeholder="Lunch">
+                    <span ng-class="{btn-danger : == function(){return Date.getTime()}}" class="input-group-addon glyphicon">Lunch</span>
+                    <input type="time" class="form-control" ng-model="lunch" placeholder="HH:mm:ss">
                 </div>
                 <div class="input-group">
-                    <span class="input-group-addon glyphicon glyphicon-time"></span>
-                    <input type="time" class="form-control" ng-model="break2" placeholder="2nd Break">
+                    <span ng-class="{btn-danger : == function(){return Date.getTime()}}" class="input-group-addon glyphicon">Second Break</span>
+                    <input type="time" class="form-control" ng-model="break2" placeholder="HH:mm:ss">
                 </div>
             </div>
         </div>
