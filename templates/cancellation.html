@@ -1,3 +1,4 @@
+<!--
 <p>{{$parent.data[0].pol.pH.name}} called in to cancel Policy {{$parent.data[0].pol.pN}} as {{$parent.data[0].pol.cancellation.exp}}. The Policy had been purchased on {{$parent.data[0].pol.doP}}, and the coverage was from {{$parent.data[0].pol.depD}} to {{$parent.data[0].pol.retD}}.</p>
 <br />
 <p>Cancellation details</p>
@@ -8,5 +9,17 @@
 </ul>
 <br />
 <p>Policy cancelled and fulfillment sent to: {{$parent.data[0].pol.pH.email}}</p>
-
+-->
+<p>Dear {{$parent.data[0].pol.pH.name}}</p>
+<p>Policy {{$parent.data[0].pol.pN}}</p>
+<br />
+<p>Thank you for contacting Allianz Global Assistance regarding your Event Ticket insurance. I am sorry to hear you wish to cancel your policy and I apologize for any inconvenience this may have caused you. It will be my pleasure to assist you with the cancellation. </p>
+<p>I have cancelled your policy as it was an unintended purchase and you did not request it. You will also receive a separate email from us confirming the cancellation and advising you that the amount of ${{$parent.data[0].pol.payment.amount}} will be refunded back to the {{$parent.data[0].pol.payment.brand}} credit card used for purchase ending in {{$parent.data[0].pol.payment.l4d}} and should reflect within your next billing statement. Please be advised that you will no longer be able to file a claim with Allianz Global Assistance should you be unable to attend the event.</p>
+<p>If you have any additional questions or concerns, or would like another copy of your insuring agreement, please feel free to contact us at eventservice@allianzassistance.com or (866) 456-3102.  We are available 24 hours a day, 365 days a year.</p>
+<p>Please take us into consideration for future events.</p>
+<br />
+<p>Sincerely,</p>
+<p>Edward A.</p>
+<p>Customer Service Department</p>
+<p>Allianz Global Assistance</p>
 <!--function Policy(pN = "", doP = "", depD = "", retD = "", pH = {name : "", email : "", phone : "", address : ""}, payment = {amount : "", brand : "", l4d : ""}, cancellation = $scope.select.canc[0])-->
