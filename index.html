@@ -27,7 +27,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <select class="form-control btn btn-success" ng-options="option.name for option in select.cTs track by option.id" ng-model="cT"></select>
+                <select class="panel-heading" ng-options="option.name for option in select.cTs track by option.id" ng-model="cT"></select>
                 <div class="panel-group" id="accordion" role="tablist"  aria-multiselectable="true">
                     
                     <div class="panel panel-default">
@@ -187,7 +187,7 @@
              <div class="col-xs-12 col-sm-6 col-md-8">
                 <div class="panel panel-default">
                     <div id="note-title" class="panel-heading">
-                        <h3 class="panel-title">E-Mail Response</h3>
+                        <h3 class="panel-title">Note</h3>
                         <div>
                             <span id="copy-button" class="img-circle glyphicon glyphicon-copy" data-ng-click="copy()"></span>
                             <span id="remove-button" class="img-circle glyphicon glyphicon-remove" data-ng-click="clear()"></span> 
