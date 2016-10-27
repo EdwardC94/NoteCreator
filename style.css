@@ -2,16 +2,20 @@ body {
     background-color: white;
     max-width: 400px;
 }
-div.row:first-child {
-background-color: #013781;
+.branding {
+    background-color : #013781;
+    color : white;
+    margin-bottom : 20px;
+    background-clip : content-box;
 }
-div.row:first-child>div.col-xs-4 {
-	padding-top: 21px;
-    height: 20px;
-}
-div.row:first-child>div.col-xs-8 {
-	color: white;
-} 
+    .branding > .col-xs-4 {
+        padding-top : 21px;
+        height : 20px;
+    }
+    .branding img {        
+        width: 103.328px;
+        float: right;
+    }
 div.row:nth-child(2) {
 	margin-top: 2em;
 	background-color: #f1f1f1;
@@ -46,12 +50,10 @@ select.btn-success {
 	margin-bottom : 1em;
 	font-size : 18px;
 }
-#note-title>h3 {
-	display : inline;
+#note-title > h3 {
+    float : left;
 }
-#copy-button, #remove-button {
-	font-size : 16px;
-}
-#copy-button {
-	margin-left : 263px;
+#note-title > div {
+    display: flex;
+    justify-content: flex-end;
 }
