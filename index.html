@@ -17,7 +17,7 @@
 </head>
 <body>
     <div ng-controller="GralCtrl" class="container-fluid">
-        <div class="row">
+        <div class="row branding">
              <div class="col-xs-8">
                 <h2>Note Creator</h2>
              </div>
@@ -185,9 +185,11 @@
                 </div>
                 <div class="panel panel-default">
                     <div id="note-title" class="panel-heading">
-                        <h3 class="panel-title">Note</h3>
-                        <a id="copy-button" href="#" ng-click="copy()"><span class="img-circle glyphicon glyphicon-copy"></span></a>
-                        <a id="remove-button" href="#" ng-click="clear()"><span class="img-circle glyphicon glyphicon-remove"></span></a> 
+                        <h3 class="panel-title">E-Mail Response</h3>
+                        <div>
+                            <span id="copy-button" class="img-circle glyphicon glyphicon-copy" data-ng-click="copy()"></span>
+                            <span id="remove-button" class="img-circle glyphicon glyphicon-remove" data-ng-click="clear()"></span> 
+                        </div>
                     </div>
                     <div id="note-content" class="panel-body" ng-include="cT.url"></div>
                 </div>
