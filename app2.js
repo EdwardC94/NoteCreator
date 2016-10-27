@@ -69,12 +69,13 @@
             $scope.data.pop();
         };
         $scope.copy = function () {
-    		var urlField = document.querySelector('#note-content');
-    		var range = document.createRange();  
-    		range.selectNode(urlField);
-    		window.getSelection().addRange(range);
-    		document.execCommand('copy');				
-    		window.getSelection().removeAllRanges();
+            var referenceNode = document.querySelector("#note-content");
+            var range = document.createRange();  
+            range.selectNode(referenceNode);
+            window.getSelection().removeAllRanges()
+            window.getSelection().addRange(range);
+            document.execCommand("copy");				
+            window.getSelection().removeAllRanges();
         };
         $scope.clear = function() {
             $scope.data.pop();
