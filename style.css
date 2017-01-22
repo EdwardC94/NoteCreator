@@ -44,6 +44,7 @@ span.glyphicon-copy:hover {
 }
 #note-content li {
 	list-style: none;
+	word-wrap : break-word;
 }
 select.btn-success {
 	margin-top : 0.5em;
