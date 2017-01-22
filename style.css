@@ -70,3 +70,6 @@ select.panel-heading {
     font-size: 16px;
     background-color: #9ea2a3;
 }
+textarea {
+	resize :  none;
+}
